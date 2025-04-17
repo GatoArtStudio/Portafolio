@@ -14,7 +14,7 @@ export default function Projects() {
     frontend: [
       {
         title: "Minemu Hosting",
-        description: "Sitio web principal de Minemu Hosting, donde ofrecemos servicios de hosting para minecraft y tienen una network para su comunidad.",
+        description: "Sitio web principal de Minemu Hosting, donde ofrecen servicios de hosting para minecraft y tienen una network para su comunidad.",
         image: "/minemu-portada.png",
         tags: ["React", "Astro", "Tailwind CSS"],
         productionUrl: "https://www.minemu.net/",
