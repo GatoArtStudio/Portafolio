@@ -40,7 +40,7 @@ export default function Projects() {
       {
         title: "BotView",
         description: "Esta herramienta te permite generar visualizaciones en tus vídeos, YouTube, Tiktok.",
-        tags: ["Python"],
+        tags: ["Python", "selenium"],
         repoUrl: "https://github.com/GatoArtStudio/BotView",
       },
     ],
@@ -72,8 +72,8 @@ export default function Projects() {
       {
         title: "Kailand Plugin",
         description: "Este plugin le permite al servidor solo autorizar a una cuenta de minecraft ingresar al servidor de kailand, como sabe cual es la cuenta correcta?, pues tiene una api que recibe los datos de cada usuario del launcher de kailand.",        tags: ["Java", "JavaFX", "Gradle", "REST API"],
+        image: "/kailand-plugin-portada.png",
         tags: ["Java", "Maven", "Spigot API", "MySQL", "JWT", "Spark"],
-        repoUrl: "https://github.com/GatoArtStudio/KailandPlugin",
       },
     ],
   }
