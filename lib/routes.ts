@@ -15,7 +15,7 @@ export const ROUTES = {
         FACEBOOK: { URL: "https://www.facebook.com/gatoartstudio", ID: "facebook" },
         YOUTUBE: { URL: "https://www.youtube.com/@gatoartstudio", ID: "youtube" },
         TWITCH: { URL: "https://www.twitch.tv/gatoartstudio", ID: "twitch" },
-        WHATSAPP: { URL: "https://wa.me/message/46M5S52TLVIGD1", ID: "whatsapp" },
+        WHATSAPP: { URL: "https://wa.me/message/UUWIFMNS3AQKO1", ID: "whatsapp" },
         TIKTOK: { URL: "https://www.tiktok.com/@gatoartstudio", ID: "tiktok" },
         PATREON: { URL: "https://www.patreon.com/GatoArtStudio", ID: "patreon" },
     },
