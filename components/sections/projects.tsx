@@ -7,16 +7,32 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ExternalLink, Github, ImageOff } from "lucide-react"
 
+interface Project {
+  title: string
+  description: string
+  image?: string
+  tags: string[]
+  productionUrl?: string
+  repoUrl?: string
+}
+
+interface Projects {
+  frontend: Project[]
+  backend: Project[]
+  desktop: Project[]
+  minecraft: Project[]
+}
+
 export default function Projects() {
   const projectsRef = useRef<HTMLElement>(null)
 
-  const projects = {
+  const projects: Projects = {
     frontend: [
       {
         title: "Minemu Hosting",
         description: "Sitio web principal de Minemu Hosting, donde ofrecen servicios de hosting para minecraft y tienen una network para su comunidad.",
         image: "/minemu-portada.png",
-        tags: ["React", "Astro", "Tailwind CSS"],
+        tags: ["React", "Astro", "Tailwind CSS", "Docker", "Tailwind Motion", "Github Action CI"],
         productionUrl: "https://www.minemu.net/",
       },
       {
@@ -64,14 +80,13 @@ export default function Projects() {
     minecraft: [
       {
         title: "MuneCraft Plugin",
-        description:
-          "Plugin para administrar servidores de Minecraft con sistema de autenticación desde discord y gestión de portales, muchas mas utilidades.",
-        tags: ["Java", "Folia API", "Spigot API", "MySQL", "Vault", "Maven"],
+        description: "MuneCrat-Plugin es un completo plugin de servidor Minecraft diseñado para el servidor comunitario MuñeCraft. Integra el juego Minecraft con la autenticación de Discord, proporciona funciones de juego personalizadas y ofrece herramientas administrativas para la gestión de servidores. El plugin requiere que los jugadores vinculen sus cuentas de Discord antes de acceder a las funciones del servidor e implementa un sofisticado sistema de permisos para el control de acceso a las características.",
+        tags: ["Java", "Folia API", "Paper API", "Geyser/Floodgate", "JDA", "Spring Security", "MySQL", "Vault", "Maven", "JUnit 5", "Mockito", "TestContainers", "Github Action CI/CD"],
         repoUrl: "https://github.com/GatoArtStudio/MuneCrat-Plugin",
       },
       {
         title: "Kailand Plugin",
-        description: "Este plugin le permite al servidor solo autorizar a una cuenta de minecraft ingresar al servidor de kailand, como sabe cual es la cuenta correcta?, pues tiene una api que recibe los datos de cada usuario del launcher de kailand.",        tags: ["Java", "JavaFX", "Gradle", "REST API"],
+        description: "Este plugin le permite al servidor solo autorizar a una cuenta de minecraft ingresar al servidor de kailand, como sabe cual es la cuenta correcta?, pues tiene una api que recibe los datos de cada usuario del launcher de kailand.",
         image: "/kailand-plugin-portada.png",
         tags: ["Java", "Maven", "Spigot API", "MySQL", "JWT", "Spark"],
       },
@@ -100,7 +115,7 @@ export default function Projects() {
           {Object.entries(projects).map(([category, categoryProjects]) => (
             <TabsContent key={category} value={category} className="mt-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {categoryProjects.map((project, index) => (
+                {categoryProjects.map((project: Project, index: number) => (
                   <Card
                     key={index}
                     className="overflow-hidden flex flex-col border-2 border-muted hover:border-primary transition-all duration-300"
@@ -127,7 +142,7 @@ export default function Projects() {
                     </CardHeader>
                     <CardContent>
                       <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag, tagIndex) => (
+                        {project.tags.map((tag: string, tagIndex: number) => (
                           <Badge key={tagIndex} variant="secondary">
                             {tag}
                           </Badge>
