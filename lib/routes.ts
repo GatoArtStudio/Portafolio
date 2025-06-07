@@ -8,7 +8,7 @@ export const ROUTES = {
     },
     OTHERS: {
         DISCORD: { URL: "https://discord.gatoartstudio.art/", ID: "discord" },
-        LINKEDIN: { URL: "https://www.linkedin.com/in/hervis-cortes-a51130342/", ID: "linkedin" },
+        LINKEDIN: { URL: "https://www.linkedin.com/in/hervis-cortes/", ID: "linkedin" },
         GITHUB: { URL: "https://github.com/GatoArtStudio", ID: "github" },
         TWITTER: { URL: "https://twitter.com/GatoArtStudio", ID: "twitter" },
         INSTAGRAM: { URL: "https://www.instagram.com/gatoartstudio", ID: "instagram" },
