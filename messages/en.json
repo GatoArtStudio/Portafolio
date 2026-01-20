@@ -1,0 +1,198 @@
+{
+  "PageMain": {
+  },
+  "PageSocialNetworks": {
+    "title": "Connect with me",
+    "description": "Find GatoArtStudio on all platforms and social media. Follow me to stay up to date with my projects and content!",
+    "links": {
+      "github": {
+        "description": "Code repositories and open-source contributions"
+      },
+      "linkedin": {
+        "description": "Professional profile and career connections"
+      },
+      "twitter": {
+        "description": "Updates and discussions about technology"
+      },
+      "instagram": {
+        "description": "Moments from my creative journey"
+      },
+      "facebook": {
+        "description": "Community and personal updates"
+      },
+      "youtube": {
+        "description": "Programming tutorials and coding sessions"
+      },
+      "twitch": {
+        "description": "Live programming and gaming streams"
+      },
+      "whatsapp": {
+        "description": "Direct contact and fast communication"
+      },
+      "discord": {
+        "description": "Join my server to chat and collaborate"
+      },
+      "tiktok": {
+        "description": "Short videos about development and technology"
+      },
+      "patreon": {
+        "description": "Support my work and access exclusive content"
+      }
+    },
+    "buttonCardVisitSocial": "Visit {platform}"
+  },
+  "MainHero": {
+    "title": "Hello, I am",
+    "subtitle": "Full Stack Software Developer",
+    "description": "Specializing in web development, desktop applications, and Minecraft development. Creating digital solutions with passion and creativity.",
+    "buttonProjects": "View Projects",
+    "buttonContact": "Contact Me"
+  },
+  "MainAbout": {
+    "title": "About Me",
+    "description": {
+      "part1": "I'm <name>Hervis Cortes</name>, a software developer passionate about creating innovative digital solutions. Known online as <alias>GatoArtStudio</alias>, I specialize in web development, desktop applications, and Minecraft development.",
+      "part2": "My journey in programming began with a curiosity to understand how the digital things we use every day work. That curiosity turned into a passion, and that passion into a career dedicated to building exceptional digital experiences.",
+      "part3": "When I'm not coding, I enjoy exploring new technologies, contributing to open source projects, and sharing knowledge with the developer community."
+    },
+    "photo": {
+      "alt": "Photo of GatoArtStudio Logo",
+      "description": "Software Developer"
+    }
+  },
+  "MainSkills": {
+    "title": "My Skills",
+    "description": "A diverse set of technical and professional skills that allow me to tackle complex projects and deliver high-quality solutions.",
+    "cards": {
+      "skill1": {
+        "title": "Development and Programming",
+        "features": {
+          "feature1": "Web development front-end and back-end",
+          "feature2": "Desktop applications",
+          "feature3": "Development of plugins and mods for Minecraft",
+          "feature4": "Programming bots for Discord and Twitch"
+        }
+      },
+      "skill2": {
+        "title": "Design and 3D Modeling",
+        "features": {
+          "feature1": "3D modeling for Nexo and mods",
+          "feature2": "Creation of resourcepacks"
+        }
+      },
+      "skill3": {
+        "title": "Server Administration and DevOps",
+        "features": {
+          "feature1": "Management and configuration of VPS and Minecraft servers",
+          "feature2": "Implementation and use of Docker",
+          "feature3": "Automation of tasks and continuous deployment (CI/CD) with DevOps practices"
+        }
+      },
+      "skill4": {
+        "title": "Soft Skills",
+        "features": {
+          "feature1": "Teamwork and collaboration",
+          "feature2": "Problem-solving and analytical thinking"
+        }
+      }
+    }
+  },
+  "MainTechnologies": {
+    "title": "Technologies and Tools",
+    "description": "The technologies and tools I use to create efficient and modern digital solutions.",
+    "categories": {
+      "category1": {
+        "name": "Languages"
+      },
+      "category2": {
+        "name": "Scripting"
+      },
+      "category3": {
+        "name": "Frameworks"
+      },
+      "category4": {
+        "name": "Tools"
+      }
+    }
+  },
+  "MainProjects": {
+    "title": "My Projects",
+    "description": "A selection of projects that demonstrate my skills and experience in different areas of development.",
+    "imageProjectNotFound": "Project image not found",
+    "categories": {
+      "category1": {
+        "name": "Frontend"
+      },
+      "category2": {
+        "name": "Backend"
+      },
+      "category3": {
+        "name": "Desktop"
+      },
+      "category4": {
+        "name": "Minecraft"
+      }
+    },
+    "projects": {
+      "frontend": {
+        "minemuHostingWeb": {
+          "title": "Minemu Hosting",
+          "description": "Minemu Hosting's main website, where they offer hosting services for Minecraft and have a network for their community."
+        },
+        "kailandWeb": {
+          "title": "Kailand",
+          "description": "This website has several sections that allow Kailand users to access social networks, download the launcher, and explore a wiki with information about items and other custom server resources."
+        }
+      },
+      "backend": {
+        "appGatoBot": {
+          "title": "GatoBot",
+          "description": "Discord bot in Python with an automated deployment system. When the project starts, a Discord bot, a REST API server, a static web service, and a Cloudflare tunnel are deployed to provide web and API access."
+        },
+        "botView": {
+          "title": "BotView",
+          "description": "This tool allows you to generate views on your videos, YouTube, TikTok."
+        }
+      },
+      "desktop": {
+        "kailandLauncher": {
+          "title": "Kailand Launcher",
+          "description": "A launcher for Minecraft Java developed in Python with Flet. It's fully automated, so the user doesn't need to install anything. The launcher pre-configures and installs everything and includes a settings section and a client-side mods section for customizing the game."
+        },
+        "authGatun": {
+          "title": "AuthGatun 2FA",
+          "description": "2FA application for Windows, Linux, and macOS, using C# and Avalonia UI."
+        }
+      },
+      "minecraft": {
+        "muneCratPlugin": {
+          "title": "MuneCraft Plugin",
+          "description": "MuneCrat-Plugin is a comprehensive Minecraft server plugin designed for the MuñeCraft community server. It integrates Minecraft with Discord authentication, provides custom gameplay features, and offers administrative tools for server management. The plugin requires players to link their Discord accounts before accessing server features and implements a sophisticated permissions system to control access to those features."
+        },
+        "kailandPluginMinecraft": {
+          "title": "Kailand Plugin",
+          "description": "This plugin allows the server to only authorize one Minecraft account to enter the Kailand server. How does it know which is the correct account? Well, it has an API that receives the data of each user from the Kailand launcher."
+        }
+      }
+    },
+    "buttonVariantPublicCode": "Code",
+    "buttonVariantPrivateCode": "Private",
+    "buttonVariantPublicProject": "View Live",
+    "buttonVariantPrivateProject": "Private Project",
+    "buttonVariantComingSoon": "Coming Soon",
+    "buttonVariantDemo": "View Demo"
+  },
+  "MainFooter": {
+    "description": "Software developer specializing in web, desktop, and Minecraft solutions",
+    "copyright": "{year} GatoArtStudio. All rights reserved.",
+    "sectionLinks": "Links",
+    "sectionConnect": "Connect",
+    "buttonHome": "Home",
+    "buttonSocialNetworks": "Social Networks"
+  },
+  "MainNavbar": {
+    "buttonHome": "Home",
+    "buttonSocial": "Socials",
+    "buttonContact": "Contact"
+  }
+}
