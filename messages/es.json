@@ -77,7 +77,70 @@
   },
   "MainProjects": {
     "title": "Mis Proyectos",
-    "description": "Una selección de proyectos que demuestran mis habilidades y experiencia en diferentes áreas de desarrollo."
+    "description": "Una selección de proyectos que demuestran mis habilidades y experiencia en diferentes áreas de desarrollo.",
+    "imageProjectNotFound": "No disponible",
+    "categories": {
+      "category1": {
+        "name": "Frontend"
+      },
+      "category2": {
+        "name": "Backend"
+      },
+      "category3": {
+        "name": "Escritorio"
+      },
+      "category4": {
+        "name": "Minecraft"
+      }
+    },
+    "projects": {
+      "frontend": {
+        "minemuHostingWeb": {
+          "title": "Minemu Hosting",
+          "description": "Sitio web principal de Minemu Hosting, donde ofrecen servicios de hosting para minecraft y tienen una network para su comunidad."
+        },
+        "kailandWeb": {
+          "title": "Kailand",
+          "description": "Este sitio web cuenta con varias secciones que permiten a los usuarios de Kailand acceder a las redes sociales, descargar el launcher y explorar una wiki con información sobre los ítems y demás recursos personalizados del servidor."
+        }
+      },
+      "backend": {
+        "appGatoBot": {
+          "title": "GatoBot",
+          "description": "Bot de Discord en Python con un sistema de despliegue automatizado. Al iniciar el proyecto, se despliega un bot de Discord, un servidor API REST, un servicio web estático y un túnel de Cloudflare para brindar acceso a la web y a la API."
+        },
+        "botView": {
+          "title": "BotView",
+          "description": "Esta herramienta te permite generar visualizaciones en tus vídeos, YouTube, Tiktok."
+        }
+      },
+      "desktop": {
+        "kailandLauncher": {
+          "title": "Kailand Launcher",
+          "description": "Launcher para Minecraft Java desarrollado en Python con Flet. Es totalmente automatizado, por lo que el usuario no necesita instalar nada. El launcher preconfigura e instala todo e incluye una sección de configuración y otra de mods client-side para personalizar el juego."
+        },
+        "authGatun": {
+          "title": "AuthGatun 2FA",
+          "description": "Aplicacion 2FA para windows, linux, y macOS, usando c# y Avalonia UI."
+        }
+      },
+      "minecraft": {
+        "muneCratPlugin": {
+          "title": "MuneCraft Plugin",
+          "description": "MuneCrat-Plugin es un completo plugin de servidor Minecraft diseñado para el servidor comunitario MuñeCraft. Integra el juego Minecraft con la autenticación de Discord, proporciona funciones de juego personalizadas y ofrece herramientas administrativas para la gestión de servidores. El plugin requiere que los jugadores vinculen sus cuentas de Discord antes de acceder a las funciones del servidor e implementa un sofisticado sistema de permisos para el control de acceso a las características."
+        },
+        "kailandPluginMinecraft": {
+          "title": "Kailand Plugin",
+          "description": "Este plugin le permite al servidor solo autorizar a una cuenta de minecraft ingresar al servidor de kailand, como sabe cual es la cuenta correcta?, pues tiene una api que recibe los datos de cada usuario del launcher de kailand."
+        }
+      }
+    },
+    "buttonVariantPublicCode": "Código",
+    "buttonVariantPrivateCode": "Privado",
+    "buttonVariantPublicProject": "Ver en producción",
+    "buttonVariantPrivateProject": "Proyecto Privado",
+    "buttonVariantComingSoon": "Próximamente",
+    "buttonVariantDemo": "Ver Demo"
   },
   "MainFooter": {
     "description": "Desarrollador de software especializado en soluciones web, desktop y Minecraft",
