@@ -1,0 +1,198 @@
+{
+  "PageMain": {
+  },
+  "PageSocialNetworks": {
+    "title": "Conecta Conmigo",
+    "description": "Encuentra a GatoArtStudio en todas las plataformas y redes sociales. ¡Sígueme para estar al día con mis proyectos y contenido!",
+    "links": {
+      "github": {
+        "description": "Repositorios de código y contribuciones open source"
+      },
+      "linkedin": {
+        "description": "Perfil profesional y conexiones laborales"
+      },
+      "twitter": {
+        "description": "Actualizaciones y discusiones sobre tecnología"
+      },
+      "instagram": {
+        "description": "Momentos de mi viaje creativo"
+      },
+      "facebook": {
+        "description": "Comunidad y actualizaciones personales"
+      },
+      "youtube": {
+        "description": "Tutoriales y sesiones de programación"
+      },
+      "twitch": {
+        "description": "Streams en vivo de programación y gaming"
+      },
+      "whatsapp": {
+        "description": "Contacto directo y comunicación rápida"
+      },
+      "discord": {
+        "description": "Únete a mi servidor para charlar y colaborar"
+      },
+      "tiktok": {
+        "description": "Videos cortos sobre desarrollo y tecnología"
+      },
+      "patreon": {
+        "description": "Apoya mi trabajo y accede a contenido exclusivo"
+      }
+    },
+    "buttonCardVisitSocial": "Visitar {platform}"
+  },
+  "MainHero": {
+    "title": "Hola, soy",
+    "subtitle": "Desarrollador de Software Full Stack",
+    "description": "Especializado en desarrollo web, aplicaciones de escritorio y desarrollo para Minecraft. Creando soluciones digitales con pasión y creatividad.",
+    "buttonProjects": "Ver Proyectos",
+    "buttonContact": "Contactar"
+  },
+  "MainAbout": {
+    "title": "Sobre Mí",
+    "description": {
+      "part1": "Soy <name>Hervis Cortes</name>, un desarrollador de software apasionado por crear soluciones digitales innovadoras. Conocido en línea como <alias>GatoArtStudio</alias>, me especializo en desarrollo web, aplicaciones de escritorio y desarrollo para Minecraft.",
+      "part2": "Mi viaje en la programación comenzó con la curiosidad por entender cómo funcionan las cosas digitales que usamos todos los días. Esa curiosidad se convirtió en pasión, y esa pasión en una carrera dedicada a construir experiencias digitales excepcionales.",
+      "part3": "Cuando no estoy codificando, me gusta explorar nuevas tecnologías, contribuir a proyectos de código abierto y compartir conocimientos con la comunidad de desarrolladores."
+    },
+    "photo": {
+      "alt": "Foto de Logo de GatoArtStudio",
+      "description": "Desarrollador de Software"
+    }
+  },
+  "MainSkills": {
+    "title": "Mis Habilidades",
+    "description": "Un conjunto diverso de habilidades técnicas y profesionales que me permiten abordar proyectos complejos y entregar soluciones de alta calidad.",
+    "cards": {
+      "skill1": {
+        "title": "Desarrollo y programación",
+        "features": {
+          "feature1": "Desarrollo web front-end y back-end",
+          "feature2": "Aplicaciones de escritorio",
+          "feature3": "Desarrollo de plugins y mods para Minecraft",
+          "feature4": "Programación de bots para Discord y Twitch"
+        }
+      },
+      "skill2": {
+        "title": "Diseño y modelado 3D",
+        "features": {
+          "feature1": "Modelado 3D para Nexo y mods",
+          "feature2": "Creación de resourcepacks"
+        }
+      },
+      "skill3": {
+        "title": "Administración de servidores y DevOps",
+        "features": {
+          "feature1": "Gestión y configuración de VPS y servidores de Minecraft",
+          "feature2": "Implementación y uso de Docker",
+          "feature3": "Automatización de tareas y despliegue continuo (CI/CD) con prácticas DevOps"
+        }
+      },
+      "skill4": {
+        "title": "Habilidades blandas",
+        "features": {
+          "feature1": "Trabajo en equipo y colaboración",
+          "feature2": "Resolución de problemas y pensamiento analítico"
+        }
+      }
+    }
+  },
+  "MainTechnologies": {
+    "title": "Tecnologías y Herramientas",
+    "description": "Las tecnologías y herramientas que utilizo para crear soluciones digitales eficientes y modernas.",
+    "categories": {
+      "category1": {
+        "name": "Lenguajes"
+      },
+      "category2": {
+        "name": "Scripting"
+      },
+      "category3": {
+        "name": "Frameworks"
+      },
+      "category4": {
+        "name": "Herramientas"
+      }
+    }
+  },
+  "MainProjects": {
+    "title": "Mis Proyectos",
+    "description": "Una selección de proyectos que demuestran mis habilidades y experiencia en diferentes áreas de desarrollo.",
+    "imageProjectNotFound": "No disponible",
+    "categories": {
+      "category1": {
+        "name": "Frontend"
+      },
+      "category2": {
+        "name": "Backend"
+      },
+      "category3": {
+        "name": "Escritorio"
+      },
+      "category4": {
+        "name": "Minecraft"
+      }
+    },
+    "projects": {
+      "frontend": {
+        "minemuHostingWeb": {
+          "title": "Minemu Hosting",
+          "description": "Sitio web principal de Minemu Hosting, donde ofrecen servicios de hosting para minecraft y tienen una network para su comunidad."
+        },
+        "kailandWeb": {
+          "title": "Kailand",
+          "description": "Este sitio web cuenta con varias secciones que permiten a los usuarios de Kailand acceder a las redes sociales, descargar el launcher y explorar una wiki con información sobre los ítems y demás recursos personalizados del servidor."
+        }
+      },
+      "backend": {
+        "appGatoBot": {
+          "title": "GatoBot",
+          "description": "Bot de Discord en Python con un sistema de despliegue automatizado. Al iniciar el proyecto, se despliega un bot de Discord, un servidor API REST, un servicio web estático y un túnel de Cloudflare para brindar acceso a la web y a la API."
+        },
+        "botView": {
+          "title": "BotView",
+          "description": "Esta herramienta te permite generar visualizaciones en tus vídeos, YouTube, Tiktok."
+        }
+      },
+      "desktop": {
+        "kailandLauncher": {
+          "title": "Kailand Launcher",
+          "description": "Launcher para Minecraft Java desarrollado en Python con Flet. Es totalmente automatizado, por lo que el usuario no necesita instalar nada. El launcher preconfigura e instala todo e incluye una sección de configuración y otra de mods client-side para personalizar el juego."
+        },
+        "authGatun": {
+          "title": "AuthGatun 2FA",
+          "description": "Aplicacion 2FA para windows, linux, y macOS, usando c# y Avalonia UI."
+        }
+      },
+      "minecraft": {
+        "muneCratPlugin": {
+          "title": "MuneCraft Plugin",
+          "description": "MuneCrat-Plugin es un completo plugin de servidor Minecraft diseñado para el servidor comunitario MuñeCraft. Integra el juego Minecraft con la autenticación de Discord, proporciona funciones de juego personalizadas y ofrece herramientas administrativas para la gestión de servidores. El plugin requiere que los jugadores vinculen sus cuentas de Discord antes de acceder a las funciones del servidor e implementa un sofisticado sistema de permisos para el control de acceso a las características."
+        },
+        "kailandPluginMinecraft": {
+          "title": "Kailand Plugin",
+          "description": "Este plugin le permite al servidor solo autorizar a una cuenta de minecraft ingresar al servidor de kailand, como sabe cual es la cuenta correcta?, pues tiene una api que recibe los datos de cada usuario del launcher de kailand."
+        }
+      }
+    },
+    "buttonVariantPublicCode": "Código",
+    "buttonVariantPrivateCode": "Privado",
+    "buttonVariantPublicProject": "Ver en producción",
+    "buttonVariantPrivateProject": "Proyecto Privado",
+    "buttonVariantComingSoon": "Próximamente",
+    "buttonVariantDemo": "Ver Demo"
+  },
+  "MainFooter": {
+    "description": "Desarrollador de software especializado en soluciones web, desktop y Minecraft",
+    "copyright": "{year} GatoArtStudio. Todos los derechos reservados.",
+    "sectionLinks": "Enlaces",
+    "sectionConnect": "Conecta",
+    "buttonHome": "Inicio",
+    "buttonSocialNetworks": "Redes Sociales"
+  },
+  "MainNavbar": {
+    "buttonHome": "Inicio",
+    "buttonSocial": "Redes",
+    "buttonContact": "Contacto"
+  }
+}
