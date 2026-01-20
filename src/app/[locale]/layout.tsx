@@ -8,6 +8,7 @@ import {hasLocale, NextIntlClientProvider} from 'next-intl';
 import '@/app/globals.css'
 import {setRequestLocale} from 'next-intl/server';
 import {PageProps} from "@/types/global/page-props";
+import {getTranslations} from 'next-intl/server';
 
 
 type Props = PageProps & {
@@ -16,11 +17,28 @@ type Props = PageProps & {
 
 const inter = Inter({subsets: ["latin"]})
 
-export const metadata = {
-    title: "GatoArtStudio | Desarrollador de Software",
-    description:
-        "Portafolio personal de Hervis Cortes (GatoArtStudio), desarrollador de software especializado en soluciones web, desktop y Minecraft.",
-    generator: 'GatoArtStudio'
+export async function generateMetadata({params}: PageProps) {
+    const {locale} = await params;
+    const t = await getTranslations({locale, namespace: 'Metadata'});
+    const baseUrl = 'https://gatoartstudio.art';
+
+    return {
+        title: {
+            default: t('title'),
+            template: `GatoArtStudio - %s`
+        },
+        description: t('description'),
+        generator: 'GatoArtStudio',
+        alternates: {
+            canonical: `${baseUrl}/${locale}`,
+            languages: Object.fromEntries(
+                routing.locales.map((lng) => [
+                    lng,
+                    `${baseUrl}/${lng}`
+                ])
+            )
+        }
+    };
 }
 
 export function generateStaticParams() {
@@ -38,7 +56,7 @@ export default async function LocaleLayout({children, params}: Props) {
     setRequestLocale(locale);
 
     return (
-        <html lang="es" suppressHydrationWarning>
+        <html lang={locale} suppressHydrationWarning>
         <head>
             <Script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.1.1/dist/iconify.min.js"/>
         </head>
