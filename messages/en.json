@@ -1,4 +1,14 @@
 {
+  "Metadata": {
+    "title": "Full Stack Software Developer",
+    "description": "Portfolio of Hervis Cortes, also known as GatoArtStudio. Software developer specialized in web development, desktop applications, and Minecraft development.",
+    "keywords": "GatoArtStudio, Hervis Cortes, Software Developer, Full Stack, Web Development, Desktop Applications, Minecraft Development, Portfolio, Programmer, Developer"
+  },
+  "SocialNetworksMetadata": {
+    "title": "Social Networks",
+    "description": "Find GatoArtStudio across all platforms and social networks. Follow me to stay up to date with my projects and content.",
+    "keywords": "GatoArtStudio, Hervis Cortes, Social Networks, GitHub, LinkedIn, Twitter, Instagram, Facebook, YouTube, Twitch, WhatsApp, Discord, TikTok, Patreon"
+  },
   "PageMain": {
   },
   "PageSocialNetworks": {
