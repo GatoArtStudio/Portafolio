@@ -1,6 +1,46 @@
 {
   "PageMain": {
   },
+  "PageSocialNetworks": {
+    "title": "Conecta Conmigo",
+    "description": "Encuentra a GatoArtStudio en todas las plataformas y redes sociales. ¡Sígueme para estar al día con mis proyectos y contenido!",
+    "links": {
+      "github": {
+        "description": "Repositorios de código y contribuciones open source"
+      },
+      "linkedin": {
+        "description": "Perfil profesional y conexiones laborales"
+      },
+      "twitter": {
+        "description": "Actualizaciones y discusiones sobre tecnología"
+      },
+      "instagram": {
+        "description": "Momentos de mi viaje creativo"
+      },
+      "facebook": {
+        "description": "Comunidad y actualizaciones personales"
+      },
+      "youtube": {
+        "description": "Tutoriales y sesiones de programación"
+      },
+      "twitch": {
+        "description": "Streams en vivo de programación y gaming"
+      },
+      "whatsapp": {
+        "description": "Contacto directo y comunicación rápida"
+      },
+      "discord": {
+        "description": "Únete a mi servidor para charlar y colaborar"
+      },
+      "tiktok": {
+        "description": "Videos cortos sobre desarrollo y tecnología"
+      },
+      "patreon": {
+        "description": "Apoya mi trabajo y accede a contenido exclusivo"
+      }
+    },
+    "buttonCardVisitSocial": "Visitar {platform}"
+  },
   "MainHero": {
     "title": "Hola, soy",
     "subtitle": "Desarrollador de Software Full Stack",

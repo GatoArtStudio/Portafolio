@@ -14,5 +14,5 @@ export default function IndexPage({params}: PageProps) {
     // can call hooks from `next-intl`
     const t = useTranslations('PageMain');
 
-    return <PageWrapperServer />;
+    return <PageWrapperServer/>;
 }
