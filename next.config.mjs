@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 const isDev = process.env.NODE_ENV === 'development';
 
 const nextConfig = {
-    output: isDev ? undefined : 'export',
+    output: isDev ? 'standalone' : 'export',
     eslint: {
         ignoreDuringBuilds: true,
     },
