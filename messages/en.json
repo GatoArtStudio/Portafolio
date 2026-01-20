@@ -1,0 +1,95 @@
+{
+  "PageMain": {
+  },
+  "MainHero": {
+    "title": "Hello, I am",
+    "subtitle": "Full Stack Software Developer",
+    "description": "Specializing in web development, desktop applications, and Minecraft development. Crafting digital solutions with passion and creativity.",
+    "buttonProjects": "View Projects",
+    "buttonContact": "Contact Me"
+  },
+  "MainAbout": {
+    "title": "About Me",
+    "description": {
+      "part1": "I am <name>Hervis Cortes</name>, a software developer passionate about creating innovative digital solutions. Known online as <alias>GatoArtStudio</alias>, I specialize in web development, desktop applications, and Minecraft development.",
+      "part2": "My journey into programming began with a curiosity to understand how the digital things we use every day work. That curiosity turned into passion, and that passion into a career dedicated to building exceptional digital experiences.",
+      "part3": "When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community."
+    },
+    "photo": {
+      "alt": "Photo of GatoArtStudio Logo",
+      "description": "Software Developer"
+    }
+  },
+  "MainSkills": {
+    "title": "My Skills",
+    "description": "A diverse set of technical and professional skills that enable me to tackle complex projects and deliver high-quality solutions.",
+    "cards": {
+      "skill1": {
+        "title": "Development and Programming",
+        "features": {
+          "feature1": "Web development front-end and back-end",
+          "feature2": "Desktop applications",
+          "feature3": "Development of plugins and mods for Minecraft",
+          "feature4": "Programming bots for Discord and Twitch"
+        }
+      },
+      "skill2": {
+        "title": "Design and 3D Modeling",
+        "features": {
+          "feature1": "3D modeling for Nexo and mods",
+          "feature2": "Creation of resourcepacks"
+        }
+      },
+      "skill3": {
+        "title": "Server Administration and DevOps",
+        "features": {
+          "feature1": "Management and configuration of VPS and Minecraft servers",
+          "feature2": "Implementation and use of Docker",
+          "feature3": "Automation of tasks and continuous deployment (CI/CD) with DevOps practices"
+        }
+      },
+      "skill4": {
+        "title": "Soft Skills",
+        "features": {
+          "feature1": "Teamwork and collaboration",
+          "feature2": "Problem-solving and analytical thinking"
+        }
+      }
+    }
+  },
+  "MainTechnologies": {
+    "title": "My Technologies",
+    "description": "Technologies and tools I frequently use to build efficient and scalable applications.",
+    "categories": {
+      "category1": {
+        "name": "Languages"
+      },
+      "category2": {
+        "name": "Scripting"
+      },
+      "category3": {
+        "name": "Frameworks"
+      },
+      "category4": {
+        "name": "Tools"
+      }
+    }
+  },
+  "MainProjects": {
+    "title": "My Projects",
+    "description": "A showcase of some of the most notable projects I've worked on, demonstrating my skills and expertise in software development."
+  },
+  "MainFooter": {
+    "description": "Software developer specializing in web, desktop, and Minecraft solutions",
+    "copyright": "{year} GatoArtStudio. All rights reserved.",
+    "sectionLinks": "Links",
+    "sectionConnect": "Connect",
+    "buttonHome": "Home",
+    "buttonSocialNetworks": "Social Networks"
+  },
+  "MainNavbar": {
+    "buttonHome": "Home",
+    "buttonSocial": "Socials",
+    "buttonContact": "Contact"
+  }
+}
