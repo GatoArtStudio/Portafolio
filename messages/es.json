@@ -43,7 +43,7 @@
       "skill3": {
         "title": "Administración de servidores y DevOps",
         "features": {
-          "feature1": "Gestión y configuración de servidores VPS y Minecraft",
+          "feature1": "Gestión y configuración de VPS y servidores de Minecraft",
           "feature2": "Implementación y uso de Docker",
           "feature3": "Automatización de tareas y despliegue continuo (CI/CD) con prácticas DevOps"
         }

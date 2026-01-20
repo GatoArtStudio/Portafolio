@@ -4,16 +4,16 @@
   "MainHero": {
     "title": "Hello, I am",
     "subtitle": "Full Stack Software Developer",
-    "description": "Specializing in web development, desktop applications, and Minecraft development. Crafting digital solutions with passion and creativity.",
+    "description": "Specializing in web development, desktop applications, and Minecraft development. Creating digital solutions with passion and creativity.",
     "buttonProjects": "View Projects",
     "buttonContact": "Contact Me"
   },
   "MainAbout": {
     "title": "About Me",
     "description": {
-      "part1": "I am <name>Hervis Cortes</name>, a software developer passionate about creating innovative digital solutions. Known online as <alias>GatoArtStudio</alias>, I specialize in web development, desktop applications, and Minecraft development.",
-      "part2": "My journey into programming began with a curiosity to understand how the digital things we use every day work. That curiosity turned into passion, and that passion into a career dedicated to building exceptional digital experiences.",
-      "part3": "When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community."
+      "part1": "I'm <name>Hervis Cortes</name>, a software developer passionate about creating innovative digital solutions. Known online as <alias>GatoArtStudio</alias>, I specialize in web development, desktop applications, and Minecraft development.",
+      "part2": "My journey in programming began with a curiosity to understand how the digital things we use every day work. That curiosity turned into a passion, and that passion into a career dedicated to building exceptional digital experiences.",
+      "part3": "When I'm not coding, I enjoy exploring new technologies, contributing to open source projects, and sharing knowledge with the developer community."
     },
     "photo": {
       "alt": "Photo of GatoArtStudio Logo",
@@ -22,7 +22,7 @@
   },
   "MainSkills": {
     "title": "My Skills",
-    "description": "A diverse set of technical and professional skills that enable me to tackle complex projects and deliver high-quality solutions.",
+    "description": "A diverse set of technical and professional skills that allow me to tackle complex projects and deliver high-quality solutions.",
     "cards": {
       "skill1": {
         "title": "Development and Programming",
@@ -58,8 +58,8 @@
     }
   },
   "MainTechnologies": {
-    "title": "My Technologies",
-    "description": "Technologies and tools I frequently use to build efficient and scalable applications.",
+    "title": "Technologies and Tools",
+    "description": "The technologies and tools I use to create efficient and modern digital solutions.",
     "categories": {
       "category1": {
         "name": "Languages"
@@ -77,7 +77,7 @@
   },
   "MainProjects": {
     "title": "My Projects",
-    "description": "A showcase of some of the most notable projects I've worked on, demonstrating my skills and expertise in software development.",
+    "description": "A selection of projects that demonstrate my skills and experience in different areas of development.",
     "imageProjectNotFound": "Project image not found",
     "categories": {
       "category1": {
