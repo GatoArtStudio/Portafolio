@@ -44,7 +44,7 @@ export default function About() {
                             <CardContent className="p-0">
                                 <div className="relative aspect-square w-full max-w-md mx-auto">
                                     <Image
-                                        src="/logo.jpg?height=500&width=500"
+                                        src="/Logo.png?height=500&width=500"
                                         alt={t('photo.alt')}
                                         width={500}
                                         height={500}
