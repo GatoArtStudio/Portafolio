@@ -10,7 +10,7 @@ export const ROUTES = {
         DISCORD: { URL: "https://discord.gatoartstudio.art/", ID: "discord" },
         LINKEDIN: { URL: "https://www.linkedin.com/in/hervis-cortes/", ID: "linkedin" },
         GITHUB: { URL: "https://github.com/GatoArtStudio", ID: "github" },
-        TWITTER: { URL: "https://twitter.com/GatoArtStudio", ID: "twitter" },
+        TWITTER: { URL: "https://twitter.com/GatoArtStudlo", ID: "twitter" },
         INSTAGRAM: { URL: "https://www.instagram.com/gatoartstudio", ID: "instagram" },
         FACEBOOK: { URL: "https://www.facebook.com/gatoartstudio", ID: "facebook" },
         YOUTUBE: { URL: "https://www.youtube.com/@gatoartstudio", ID: "youtube" },
