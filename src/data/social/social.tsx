@@ -22,7 +22,7 @@ export const socialLinks: SocialLinks[] =  [
     {
         id: "twitter",
         name: "Twitter",
-        username: "@GatoArtStudlo",
+        username: "@GatoArtStudio",
         url: ROUTES.OTHERS.TWITTER.URL,
         icon: <Twitter className="h-6 w-6"/>,
     },
