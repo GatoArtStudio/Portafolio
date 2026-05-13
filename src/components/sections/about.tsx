@@ -33,8 +33,11 @@ export default function About() {
                         <p className="text-lg mb-6 text-muted-foreground">
                             {t('description.part2')}
                         </p>
-                        <p className="text-lg text-muted-foreground">
+                        <p className="text-lg mb-6 text-muted-foreground">
                             {t('description.part3')}
+                        </p>
+                        <p className="text-lg text-muted-foreground">
+                            {t('description.part4')}
                         </p>
                     </div>
 

@@ -92,13 +92,12 @@ export default function Hero() {
             <div className="container mx-auto px-4 py-24 z-10">
                 <div className="max-w-3xl mx-auto text-center">
                     <h1 className="hero-title text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                        <span className="block">{t('title')}</span>
                         <span
                             className="block bg-gradient-to-r from-primary to-cyan-300 text-transparent bg-clip-text mt-2">
-              GatoArtStudio
+              Hervis Cortes
             </span>
                     </h1>
-                    <h2 className="hero-subtitle text-2xl md:text-3xl font-medium text-muted-foreground mb-6">
+                    <h2 className="hero-subtitle text-3xl md:text-4xl font-medium text-muted-foreground mb-6">
                         {t('subtitle')}
                     </h2>
                     <p className="hero-description text-lg md:text-xl text-muted-foreground mb-8">

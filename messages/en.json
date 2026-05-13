@@ -1,6 +1,6 @@
 {
   "Metadata": {
-    "title": "Full Stack Software Developer",
+    "title": "Software Engineer & Creator",
     "description": "Portfolio of Hervis Cortes, also known as GatoArtStudio. Software developer specialized in web development, desktop applications, and Minecraft development.",
     "keywords": "GatoArtStudio, Hervis Cortes, Software Developer, Full Stack, Web Development, Desktop Applications, Minecraft Development, Portfolio, Programmer, Developer"
   },
@@ -53,21 +53,22 @@
   },
   "MainHero": {
     "title": "Hello, I am",
-    "subtitle": "Full Stack Software Developer",
-    "description": "Specializing in web development, desktop applications, and Minecraft development. Creating digital solutions with passion and creativity.",
+    "subtitle": "Software Engineer & Creator",
+    "description": "Building digital products, tools, and systems under the GatoArtStudio brand.",
     "buttonProjects": "View Projects",
     "buttonContact": "Contact Me"
   },
   "MainAbout": {
     "title": "About Me",
     "description": {
-      "part1": "I'm <name>Hervis Cortes</name>, a software developer passionate about creating innovative digital solutions. Known online as <alias>GatoArtStudio</alias>, I specialize in web development, desktop applications, and Minecraft development.",
-      "part2": "My journey in programming began with a curiosity to understand how the digital things we use every day work. That curiosity turned into a passion, and that passion into a career dedicated to building exceptional digital experiences.",
-      "part3": "When I'm not coding, I enjoy exploring new technologies, contributing to open source projects, and sharing knowledge with the developer community."
+      "part1": "I’m <name>Hervis Cortes</name>, a Colombian Software Engineer and creator of <alias>GatoArtStudio</alias>, a personal brand focused on software development and digital product engineering.",
+      "part2": "I primarily work with C#, Java, and TypeScript, developing web applications, desktop tools, automations, and solutions for Minecraft ecosystems.",
+      "part3": "I also have experience working with modern frontend technologies such as React, Next.js, and TailwindCSS, alongside development workflows based on Git, GitHub, and DevOps practices.",
+      "part4": "My approach is focused on building maintainable, scalable, and technically solid software."
     },
     "photo": {
       "alt": "Photo of GatoArtStudio Logo",
-      "description": "Software Developer"
+      "description": "Software Engineer"
     }
   },
   "MainSkills": {
