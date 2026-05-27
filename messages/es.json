@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Software Engineer & Creator",
+    "title": "Product-Focused Software Developer",
     "description": "Portafolio de Hervis Cortes, también conocido como GatoArtStudio. Desarrollador de software especializado en desarrollo web, aplicaciones de escritorio y desarrollo para Minecraft.",
-    "keywords": "GatoArtStudio, Hervis Cortes, Desarrollador de Software, Full Stack, Desarrollo Web, Aplicaciones de Escritorio, Desarrollo para Minecraft, Portafolio, Programador, Developer"
+    "keywords": "GatoArtStudio, Hervis Cortes, Desarrollador de Software, Full Stack, Desarrollo Web, Aplicaciones de Escritorio, Desarrollo para Minecraft, Portafolio, Programador, Developer, Product Engineer"
   },
   "SocialNetworksMetadata": {
     "title": "Redes Sociales",
@@ -53,18 +53,18 @@
   },
   "MainHero": {
     "title": "Hola, soy",
-    "subtitle": "Software Engineer & Creator",
-    "description": "Construyendo productos digitales, herramientas y sistemas bajo la marca GatoArtStudio.",
+    "subtitle": "Product-Focused Software Developer",
+    "description": "Desarrollando productos digitales y sistemas completos, desde la arquitectura hasta el despliegue, bajo la marca GatoArtStudio.",
     "buttonProjects": "Ver Proyectos",
     "buttonContact": "Contactar"
   },
   "MainAbout": {
     "title": "Sobre Mí",
     "description": {
-      "part1": "Soy <name>Hervis Cortes</name>, Software Engineer colombiano y creador de <alias>GatoArtStudio</alias>, una marca personal enfocada en desarrollo de software y construcción de productos digitales.",
-      "part2": "Trabajo principalmente con C#, Java y TypeScript desarrollando aplicaciones web, herramientas desktop, automatizaciones y soluciones para ecosistemas Minecraft.",
-      "part3": "También tengo experiencia trabajando con tecnologías frontend modernas como React, Next.js y TailwindCSS, además de flujos de desarrollo basados en Git, GitHub y prácticas DevOps.",
-      "part4": "Mi enfoque está orientado a crear software mantenible, escalable y técnicamente sólido."
+      "part1": "Soy <name>Hervis Cortes</name>, desarrollador de software colombiano y creador de <alias>GatoArtStudio</alias>, una marca personal enfocada en desarrollo de software y construcción de productos digitales.",
+      "part2": "Trabajo principalmente con C#, Java y TypeScript, desarrollando aplicaciones web, herramientas desktop, automatizaciones y sistemas para ecosistemas Minecraft.",
+      "part3": "También tengo experiencia con tecnologías frontend modernas como React, Next.js y TailwindCSS, además de flujos de desarrollo basados en Git, GitHub, CI/CD y prácticas DevOps.",
+      "part4": "Mi enfoque está orientado a construir productos y sistemas mantenibles, escalables y técnicamente sólidos, cubriendo desde la arquitectura hasta el despliegue."
     },
     "photo": {
       "alt": "Foto de Logo de GatoArtStudio",
