@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Software Engineer & Creator",
+    "title": "Product-Focused Software Developer",
     "description": "Portfolio of Hervis Cortes, also known as GatoArtStudio. Software developer specialized in web development, desktop applications, and Minecraft development.",
-    "keywords": "GatoArtStudio, Hervis Cortes, Software Developer, Full Stack, Web Development, Desktop Applications, Minecraft Development, Portfolio, Programmer, Developer"
+    "keywords": "GatoArtStudio, Hervis Cortes, Software Developer, Full Stack, Web Development, Desktop Applications, Minecraft Development, Portfolio, Programmer, Developer, Product Engineer"
   },
   "SocialNetworksMetadata": {
     "title": "Social Networks",
@@ -53,18 +53,18 @@
   },
   "MainHero": {
     "title": "Hello, I am",
-    "subtitle": "Software Engineer & Creator",
-    "description": "Building digital products, tools, and systems under the GatoArtStudio brand.",
+    "subtitle": "Product-Focused Software Developer",
+    "description": "Building complete digital products and software systems, from architecture to deployment, under the GatoArtStudio brand.",
     "buttonProjects": "View Projects",
     "buttonContact": "Contact Me"
   },
   "MainAbout": {
     "title": "About Me",
     "description": {
-      "part1": "I’m <name>Hervis Cortes</name>, a Colombian Software Engineer and creator of <alias>GatoArtStudio</alias>, a personal brand focused on software development and digital product engineering.",
-      "part2": "I primarily work with C#, Java, and TypeScript, developing web applications, desktop tools, automations, and solutions for Minecraft ecosystems.",
-      "part3": "I also have experience working with modern frontend technologies such as React, Next.js, and TailwindCSS, alongside development workflows based on Git, GitHub, and DevOps practices.",
-      "part4": "My approach is focused on building maintainable, scalable, and technically solid software."
+      "part1": "I’m <name>Hervis Cortes</name>, a Colombian software developer and creator of <alias>GatoArtStudio</alias>, a personal brand focused on software development and digital product building.",
+      "part2": "I primarily work with C#, Java, and TypeScript, developing web applications, desktop tools, automations, and systems for Minecraft ecosystems.",
+      "part3": "I also have experience with modern frontend technologies such as React, Next.js, and TailwindCSS, alongside development workflows based on Git, GitHub, CI/CD, and DevOps practices.",
+      "part4": "My approach is focused on building maintainable, scalable, and technically solid products and systems, covering everything from architecture to deployment."
     },
     "photo": {
       "alt": "Photo of GatoArtStudio Logo",
