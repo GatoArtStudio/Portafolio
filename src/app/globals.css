@@ -8,11 +8,20 @@
     --fg: 210 40% 98%;
     --fg-muted: 215 20% 65%;
     --surface: 217 32% 17%;
+    --surface-elevated: 217 28% 20%;
     --accent: 184 100% 50%;
     --accent-soft: 184 100% 50% / 0.10;
     --accent-glow: 184 100% 50% / 0.15;
     --border: 217 32% 17%;
     --border-soft: 217 32% 17% / 0.6;
+
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.25);
+    --shadow-elevated: 0 2px 6px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-button: 0 1px 2px rgba(0, 0, 0, 0.4);
   }
 
   * {
@@ -41,6 +50,7 @@
   :focus-visible {
     outline: 2px solid hsl(var(--accent));
     outline-offset: 2px;
+    border-radius: var(--radius-sm);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -99,6 +109,22 @@
       padding-bottom: 8rem;
     }
   }
+
+  /* Card surface */
+  .card {
+    border-radius: var(--radius-md);
+    border: 1px solid hsl(var(--border));
+    background-color: hsl(var(--surface));
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Elevated surface */
+  .card-elevated {
+    border-radius: var(--radius-md);
+    border: 1px solid hsl(var(--border));
+    background-color: hsl(var(--surface-elevated));
+    box-shadow: var(--shadow-elevated);
+  }
 }
 
 @layer utilities {
@@ -106,7 +132,6 @@
     text-wrap: balance;
   }
 
-  /* Underline draw on hover */
   .underline-draw {
     position: relative;
   }
@@ -118,22 +143,21 @@
     width: 0;
     height: 1.5px;
     background: hsl(var(--accent));
+    border-radius: 1px;
     transition: width 0.3s ease;
   }
   .underline-draw:hover::after {
     width: 100%;
   }
 
-  /* Hover glow for bordered elements */
   .hover-glow {
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
   }
   .hover-glow:hover {
     border-color: hsl(var(--accent) / 0.4);
-    box-shadow: 0 0 20px -8px hsl(var(--accent) / 0.15);
+    box-shadow: 0 0 20px -6px hsl(var(--accent) / 0.2), var(--shadow-card);
   }
 
-  /* Reveal on scroll */
   .reveal {
     opacity: 0;
     transform: translateY(1.5rem);

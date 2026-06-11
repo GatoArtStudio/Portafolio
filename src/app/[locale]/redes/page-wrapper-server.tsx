@@ -26,7 +26,7 @@ export default function SocialMedia() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-5 border border-border hover-glow group"
+                className="card hover-glow p-5 group transition-all duration-300"
               >
                 <p className="font-display text-lg font-semibold text-fg mb-1 group-hover:text-accent transition-colors duration-200">
                   {social.name}

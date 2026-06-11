@@ -10,11 +10,12 @@ type ButtonProps = {
 }
 
 const base =
-  "font-body text-sm font-medium inline-flex items-center gap-2 px-6 py-3 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 underline-draw active:scale-[0.98]"
+  "font-body text-sm font-medium inline-flex items-center gap-2 px-6 py-3 rounded-md transition-all duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 active:scale-[0.98]"
 
 const variants = {
-  primary: "bg-accent text-bg hover:opacity-90",
-  outline: "border border-accent text-accent hover:bg-accent-soft",
+  primary: "bg-accent text-bg shadow-[var(--shadow-button)] hover:opacity-90 hover:shadow-md",
+  outline:
+    "border border-accent text-accent hover:bg-accent-soft shadow-[var(--shadow-button)] hover:shadow-md",
 }
 
 export default function Button({

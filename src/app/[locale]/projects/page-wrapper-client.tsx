@@ -25,14 +25,14 @@ export default function ProjectsPageWrapper() {
             {allProjects.map((project) => (
               <div
                 key={project.id}
-                className="border border-border hover-glow p-6 flex flex-col transition-colors duration-300"
+                className="card hover-glow p-6 flex flex-col transition-all duration-300"
               >
                 {project.image && (
                   <div className="mb-5 overflow-hidden">
                     <img
                       src={project.image}
                       alt={pt(`${project.id}.title`)}
-                      className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
+                      className="w-full h-48 object-cover rounded-sm transition-transform duration-500 hover:scale-105"
                       loading="lazy"
                     />
                   </div>

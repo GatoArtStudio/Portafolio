@@ -19,7 +19,7 @@ export default function Navbar() {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-bg/90 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-bg/90 backdrop-blur-sm border-b border-border shadow-[0_1px_3px_rgba(0,0,0,0.3)]">
       <nav className="max-w-wide mx-auto px-6 h-14 flex items-center justify-between">
         <Link
           href={`/${locale}`}
@@ -60,7 +60,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden font-body text-xs font-medium text-fg-muted border border-border hover:border-accent/40 px-3 py-1.5 transition-all duration-200"
+          className="md:hidden font-body text-xs font-medium text-fg-muted border border-border hover:border-accent/40 px-3 py-1.5 rounded-md transition-all duration-200"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
