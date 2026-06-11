@@ -6,6 +6,7 @@ import Tag from "@/components/tag"
 import Button from "@/components/button"
 import BackgroundGlow from "@/components/background-glow"
 import BackToTop from "@/components/back-to-top"
+import ProjectCardImage from "@/components/project-card-image"
 import allProjects from "@/data/projects"
 import { useTranslations } from "next-intl"
 
@@ -30,16 +31,11 @@ export default function ProjectsPageWrapper() {
                 key={project.id}
                 className="card hover-glow p-6 flex flex-col transition-all duration-300"
               >
-                {project.image && (
-                  <div className="mb-5 -mx-6 -mt-6 rounded-t-md overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={pt(`${project.id}.title`)}
-                      className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-                )}
+                <ProjectCardImage
+                  src={project.image}
+                  alt={pt(`${project.id}.title`)}
+                  title={pt(`${project.id}.title`)}
+                />
 
                 <h3 className="font-display text-xl font-semibold text-fg mb-3">
                   {pt(`${project.id}.title`)}

@@ -45,6 +45,7 @@
     "buttonContact": "Let's talk"
   },
   "MainAbout": {
+    "eyebrow": "About",
     "title": "Software Engineer",
     "p1": "I'm Hervis Cortes, creator of GatoArtStudio, a personal brand from which I develop software products and systems for clients and companies.",
     "p2": "My work is focused on building maintainable solutions, ready to evolve over time. I've worked on web applications, desktop tools, automations, and Minecraft ecosystems, covering everything from architecture and development to continuous delivery and deployment.",
@@ -154,9 +155,11 @@
     "languages": "Languages",
     "scripting": "Scripting",
     "frameworks": "Frameworks & Libraries",
-    "tools": "Tools & Technologies"
+    "tools": "Tools & Technologies",
+    "totalLabel": "technologies across 4 categories"
   },
   "MainCTA": {
+    "status": "Available for projects",
     "title": "Need to build or improve a software product?",
     "description": "I work with clients and companies developing maintainable, scalable products ready to evolve.",
     "button": "Let's talk about your project"

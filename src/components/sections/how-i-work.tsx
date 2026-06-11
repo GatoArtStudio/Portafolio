@@ -1,6 +1,7 @@
 "use client"
 
 import { useTranslations } from "next-intl"
+import SectionHeader from "@/components/section-header"
 
 export default function HowIWork() {
   const t = useTranslations("MainHowIWork")
@@ -14,10 +15,7 @@ export default function HowIWork() {
   return (
     <section id="how-i-work" className="section-padding">
       <div className="max-w-content mx-auto px-6">
-        <p className="eyebrow mb-3">{t("eyebrow")}</p>
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-fg mb-14 text-balance">
-          {t("title")}
-        </h2>
+        <SectionHeader index={4} total={7} eyebrow={t("eyebrow")} title={t("title")} />
 
         <div className="relative max-w-2xl">
           {/* Vertical connector line */}

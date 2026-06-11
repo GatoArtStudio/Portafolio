@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl"
 import Tag from "@/components/tag"
 import Button from "@/components/button"
+import SectionHeader from "@/components/section-header"
 import allProjects, { featuredIds } from "@/data/projects"
 
 export default function Projects() {
@@ -15,10 +16,7 @@ export default function Projects() {
   return (
     <section id="projects" className="section-padding">
       <div className="max-w-content mx-auto px-6">
-        <p className="eyebrow mb-3">{t("eyebrow")}</p>
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-fg mb-14 text-balance">
-          {t("title")}
-        </h2>
+        <SectionHeader index={3} total={7} eyebrow={t("eyebrow")} title={t("title")} />
 
         <div className="space-y-20">
           {featured.map((project) => (

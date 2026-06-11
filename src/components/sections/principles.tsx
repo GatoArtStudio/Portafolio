@@ -1,6 +1,7 @@
 "use client"
 
 import { useTranslations } from "next-intl"
+import SectionHeader from "@/components/section-header"
 
 export default function Principles() {
   const t = useTranslations("MainPrinciples")
@@ -9,10 +10,7 @@ export default function Principles() {
   return (
     <section id="principles" className="section-padding">
       <div className="max-w-content mx-auto px-6">
-        <p className="eyebrow mb-3">{t("eyebrow")}</p>
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-fg mb-10 text-balance">
-          {t("title")}
-        </h2>
+        <SectionHeader index={5} total={7} eyebrow={t("eyebrow")} title={t("title")} />
 
         <ul className="space-y-4 max-w-2xl">
           {principles.map((principle, i) => (

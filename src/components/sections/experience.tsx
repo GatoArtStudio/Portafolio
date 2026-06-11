@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl"
 import Tag from "@/components/tag"
+import SectionHeader from "@/components/section-header"
 import experienceData from "@/data/experience"
 
 export default function Experience() {
@@ -11,10 +12,7 @@ export default function Experience() {
   return (
     <section id="experience" className="section-padding">
       <div className="max-w-content mx-auto px-6">
-        <p className="eyebrow mb-3">{t("eyebrow")}</p>
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-fg mb-14 text-balance">
-          {t("title")}
-        </h2>
+        <SectionHeader index={2} total={7} eyebrow={t("eyebrow")} title={t("title")} />
 
         <div className="space-y-6">
           {experienceData.map((entry, i) => (

@@ -44,13 +44,9 @@ export default function PageWrapper() {
         <div className="reveal"><About /></div>
         <BlueprintDivider />
         <div className="reveal"><Experience /></div>
-        <BlueprintDivider />
         <div className="reveal"><Projects /></div>
-        <BlueprintDivider />
         <div className="reveal"><HowIWork /></div>
-        <BlueprintDivider />
         <div className="reveal"><Principles /></div>
-        <BlueprintDivider />
         <div className="reveal"><Technologies /></div>
         <BlueprintDivider />
         <div className="reveal"><CTA /></div>

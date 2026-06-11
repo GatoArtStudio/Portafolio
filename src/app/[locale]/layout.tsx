@@ -35,11 +35,39 @@ export async function generateMetadata({ params }: PageProps) {
       template: `GatoArtStudio - %s`,
     },
     description: t('description'),
+    metadataBase: new URL(baseUrl),
+    openGraph: {
+      type: 'website',
+      locale: locale === 'es' ? 'es_ES' : 'en_US',
+      url: `${baseUrl}/${locale}`,
+      siteName: 'GatoArtStudio',
+      title: t('title'),
+      description: t('description'),
+      images: [
+        {
+          url: `${baseUrl}/og-image.svg`,
+          width: 1200,
+          height: 630,
+          alt: t('title'),
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: [`${baseUrl}/og-image.svg`],
+    },
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages: Object.fromEntries(
         routing.locales.map((lng) => [lng, `${baseUrl}/${lng}`])
       ),
+    },
+    icons: {
+      icon: [
+        { url: '/favicon.svg', type: 'image/svg+xml' },
+      ],
     },
   }
 }
