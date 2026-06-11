@@ -1,0 +1,59 @@
+import Link from "next/link"
+
+type ButtonProps = {
+  href?: string
+  onClick?: () => void
+  variant?: "primary" | "outline"
+  children: React.ReactNode
+  className?: string
+  type?: "button" | "submit"
+}
+
+const base =
+  "font-mono text-sm font-medium inline-flex items-center gap-2 px-6 py-3 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 underline-draw"
+
+const variants = {
+  primary: "bg-accent text-bg hover:opacity-90",
+  outline: "border border-accent text-accent hover:bg-accent-soft",
+}
+
+export default function Button({
+  href,
+  onClick,
+  variant = "primary",
+  children,
+  className = "",
+  type = "button",
+}: ButtonProps) {
+  const classes = `${base} ${variants[variant]} ${className}`
+
+  if (href?.startsWith("mailto:")) {
+    return (
+      <a href={href} className={classes}>
+        {children}
+      </a>
+    )
+  }
+
+  if (href?.startsWith("#") || href?.startsWith("/")) {
+    return (
+      <Link href={href} className={classes}>
+        {children}
+      </Link>
+    )
+  }
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+        {children}
+      </a>
+    )
+  }
+
+  return (
+    <button type={type} onClick={onClick} className={classes}>
+      {children}
+    </button>
+  )
+}

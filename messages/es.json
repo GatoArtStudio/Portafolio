@@ -1,209 +1,186 @@
 {
   "Metadata": {
-    "title": "Product-Focused Software Developer",
-    "description": "Portafolio de Hervis Cortes, también conocido como GatoArtStudio. Desarrollador de software especializado en desarrollo web, aplicaciones de escritorio y desarrollo para Minecraft.",
-    "keywords": "GatoArtStudio, Hervis Cortes, Desarrollador de Software, Full Stack, Desarrollo Web, Aplicaciones de Escritorio, Desarrollo para Minecraft, Portafolio, Programador, Developer, Product Engineer"
+    "title": "Software Engineer — Orientado a Producto",
+    "description": "Hervis Cortes, creador de GatoArtStudio. Software Engineer enfocado en construir productos de software mantenibles y escalables que resuelven problemas reales."
   },
   "SocialNetworksMetadata": {
     "title": "Redes Sociales",
-    "description": "Encuentra a GatoArtStudio en todas las plataformas y redes sociales. Sígueme para mantenerte al día con mis proyectos y contenido.",
-    "keywords": "GatoArtStudio, Hervis Cortes, Redes Sociales, GitHub, LinkedIn, Twitter, Instagram, Facebook, YouTube, Twitch, WhatsApp, Discord, TikTok, Patreon"
+    "description": "Encuentra a GatoArtStudio en todas las plataformas y redes sociales.",
+    "keywords": "GatoArtStudio, Hervis Cortes, Redes Sociales, GitHub, LinkedIn, Twitter, Instagram, YouTube, Twitch, Discord, TikTok"
   },
-  "PageMain": {
+  "ProjectsMetadata": {
+    "title": "Proyectos",
+    "description": "Todos los proyectos de software desarrollados por GatoArtStudio en frontend, backend, escritorio y Minecraft."
   },
+  "PageMain": {},
   "PageSocialNetworks": {
-    "title": "Conecta Conmigo",
-    "description": "Encuentra a GatoArtStudio en todas las plataformas y redes sociales. ¡Sígueme para estar al día con mis proyectos y contenido!",
+    "title": "Conecta conmigo",
+    "description": "Encuentra a GatoArtStudio en todas las plataformas y redes sociales.",
     "links": {
-      "github": {
-        "description": "Repositorios de código y contribuciones open source"
-      },
-      "linkedin": {
-        "description": "Perfil profesional y conexiones laborales"
-      },
-      "twitter": {
-        "description": "Actualizaciones y discusiones sobre tecnología"
-      },
-      "instagram": {
-        "description": "Momentos de mi viaje creativo"
-      },
-      "facebook": {
-        "description": "Comunidad y actualizaciones personales"
-      },
-      "youtube": {
-        "description": "Tutoriales y sesiones de programación"
-      },
-      "twitch": {
-        "description": "Streams en vivo de programación y gaming"
-      },
-      "whatsapp": {
-        "description": "Contacto directo y comunicación rápida"
-      },
-      "discord": {
-        "description": "Únete a mi servidor para charlar y colaborar"
-      },
-      "tiktok": {
-        "description": "Videos cortos sobre desarrollo y tecnología"
-      },
-      "patreon": {
-        "description": "Apoya mi trabajo y accede a contenido exclusivo"
-      }
+      "github": { "description": "Repositorios de código y contribuciones open source" },
+      "linkedin": { "description": "Perfil profesional y conexiones laborales" },
+      "twitter": { "description": "Actualizaciones y discusiones sobre tecnología" },
+      "instagram": { "description": "Momentos de mi viaje creativo" },
+      "facebook": { "description": "Comunidad y actualizaciones personales" },
+      "youtube": { "description": "Tutoriales y sesiones de programación" },
+      "twitch": { "description": "Streams en vivo de programación y gaming" },
+      "whatsapp": { "description": "Contacto directo y comunicación rápida" },
+      "discord": { "description": "Únete a mi servidor para charlar y colaborar" },
+      "tiktok": { "description": "Videos cortos sobre desarrollo y tecnología" },
+      "patreon": { "description": "Apoya mi trabajo y accede a contenido exclusivo" }
     },
     "buttonCardVisitSocial": "Visitar {platform}"
   },
+  "PageProjects": {
+    "title": "Todos los proyectos",
+    "description": "Un catálogo completo de los productos y sistemas de software que he construido.",
+    "backToHome": "Volver al inicio"
+  },
   "MainHero": {
-    "title": "Hola, soy",
-    "subtitle": "Product-Focused Software Developer",
-    "description": "Desarrollando productos digitales y sistemas completos, desde la arquitectura hasta el despliegue, bajo la marca GatoArtStudio.",
-    "buttonProjects": "Ver Proyectos",
-    "buttonContact": "Contactar"
+    "eyebrow": "Software Engineer",
+    "name": "Hervis Cortes",
+    "headline": "Construyo productos de software mantenibles y escalables que resuelven problemas reales.",
+    "description": "Software Engineer detrás de GatoArtStudio. Desarrollo productos digitales, herramientas y sistemas, desde la arquitectura hasta producción.",
+    "buttonProjects": "Ver proyectos",
+    "buttonContact": "Hablemos"
   },
   "MainAbout": {
-    "title": "Sobre Mí",
-    "description": {
-      "part1": "Soy <name>Hervis Cortes</name>, desarrollador de software colombiano y creador de <alias>GatoArtStudio</alias>, una marca personal enfocada en desarrollo de software y construcción de productos digitales.",
-      "part2": "Trabajo principalmente con C#, Java y TypeScript, desarrollando aplicaciones web, herramientas desktop, automatizaciones y sistemas para ecosistemas Minecraft.",
-      "part3": "También tengo experiencia con tecnologías frontend modernas como React, Next.js y TailwindCSS, además de flujos de desarrollo basados en Git, GitHub, CI/CD y prácticas DevOps.",
-      "part4": "Mi enfoque está orientado a construir productos y sistemas mantenibles, escalables y técnicamente sólidos, cubriendo desde la arquitectura hasta el despliegue."
+    "title": "Software Engineer",
+    "p1": "Soy Hervis Cortes, creador de GatoArtStudio, una marca personal desde la que desarrollo productos y sistemas de software para clientes y empresas.",
+    "p2": "Mi trabajo está orientado a construir soluciones mantenibles y preparadas para evolucionar con el tiempo. He trabajado en aplicaciones web, herramientas desktop, automatizaciones y ecosistemas Minecraft, cubriendo desde la arquitectura y el desarrollo hasta la entrega continua y el despliegue.",
+    "p3": "Mi enfoque está centrado en la calidad, la mantenibilidad y la creación de productos capaces de crecer junto con las necesidades del negocio."
+  },
+  "MainExperience": {
+    "eyebrow": "Experiencia",
+    "title": "Resultados, no solo tecnologías",
+    "resultsLabel": "Resultados"
+  },
+  "experience": {
+    "minemu": {
+      "role": "Founding Product Engineer",
+      "period": "Enero 2025 — Actualidad",
+      "description": "Participo en el diseño y evolución de la plataforma, desarrollando nuevas funcionalidades, herramientas internas y automatizaciones para optimizar los flujos operativos.",
+      "result1": "Implementación de pipelines CI/CD para automatizar despliegues.",
+      "result2": "Desarrollo de herramientas internas integradas con Discord y Pterodactyl.",
+      "result3": "Diseño de arquitecturas backend preparadas para el crecimiento del producto.",
+      "result4": "Administración y despliegue de servicios mediante Docker."
     },
-    "photo": {
-      "alt": "Foto de Logo de GatoArtStudio",
-      "description": "Product-Focused Software Developer"
-    }
-  },
-  "MainSkills": {
-    "title": "Mis Habilidades",
-    "description": "Un conjunto diverso de habilidades técnicas y profesionales que me permiten abordar proyectos complejos y entregar soluciones de alta calidad.",
-    "cards": {
-      "skill1": {
-        "title": "Desarrollo y programación",
-        "features": {
-          "feature1": "Desarrollo web front-end y back-end",
-          "feature2": "Aplicaciones de escritorio",
-          "feature3": "Desarrollo de plugins y mods para Minecraft",
-          "feature4": "Programación de bots para Discord y Twitch"
-        }
-      },
-      "skill2": {
-        "title": "Diseño y modelado 3D",
-        "features": {
-          "feature1": "Modelado 3D para Nexo y mods",
-          "feature2": "Creación de resourcepacks"
-        }
-      },
-      "skill3": {
-        "title": "Administración de servidores y DevOps",
-        "features": {
-          "feature1": "Gestión y configuración de VPS y servidores de Minecraft",
-          "feature2": "Implementación y uso de Docker",
-          "feature3": "Automatización de tareas y despliegue continuo (CI/CD) con prácticas DevOps"
-        }
-      },
-      "skill4": {
-        "title": "Habilidades blandas",
-        "features": {
-          "feature1": "Trabajo en equipo y colaboración",
-          "feature2": "Resolución de problemas y pensamiento analítico"
-        }
-      }
-    }
-  },
-  "MainTechnologies": {
-    "title": "Tecnologías y Herramientas",
-    "description": "Las tecnologías y herramientas que utilizo para crear soluciones digitales eficientes y modernas.",
-    "categories": {
-      "category1": {
-        "name": "Lenguajes"
-      },
-      "category2": {
-        "name": "Scripting"
-      },
-      "category3": {
-        "name": "Frameworks"
-      },
-      "category4": {
-        "name": "Herramientas"
-      }
+    "authgatun": {
+      "role": "Software Engineer",
+      "period": "2024 — Actualidad",
+      "description": "Aplicación multiplataforma orientada a la gestión segura de claves 2FA.",
+      "result1": "Desarrollo de una aplicación desktop moderna y multiplataforma.",
+      "result2": "Diseño de una arquitectura enfocada en mantenibilidad y separación de responsabilidades.",
+      "result3": "Automatización de integración y despliegue continuo.",
+      "result4": "Implementación de almacenamiento local seguro."
+    },
+    "kailand": {
+      "role": "Freelance Software Engineer",
+      "period": "Enero 2024 — Diciembre 2025",
+      "description": "Participación en el desarrollo del ecosistema digital del proyecto.",
+      "result1": "Desarrollo del launcher de escritorio.",
+      "result2": "Construcción y mantenimiento de la plataforma web.",
+      "result3": "Desarrollo de plugins y mods personalizados.",
+      "result4": "Integración de APIs y herramientas internas para mejorar la administración de la comunidad."
     }
   },
   "MainProjects": {
-    "title": "Mis Proyectos",
-    "description": "Una selección de proyectos que demuestran mis habilidades y experiencia en diferentes áreas de desarrollo.",
-    "imageProjectNotFound": "No disponible",
-    "categories": {
-      "category1": {
-        "name": "Frontend"
-      },
-      "category2": {
-        "name": "Backend"
-      },
-      "category3": {
-        "name": "Escritorio"
-      },
-      "category4": {
-        "name": "Minecraft"
-      }
+    "eyebrow": "Proyectos destacados",
+    "title": "Casos de estudio",
+    "viewAll": "Ver todos los proyectos"
+  },
+  "projects": {
+    "minemuHostingWeb": {
+      "title": "Minemu Hosting",
+      "description": "Sitio web principal de Minemu Hosting, donde ofrecen servicios de hosting para Minecraft y tienen una network para su comunidad.",
+      "problem": "El servicio de hosting necesitaba una presencia web moderna que reflejara su marca y se integrara con su network de comunidad Minecraft.",
+      "solution": "Un sitio web completo construido con React, Astro y TailwindCSS, desplegado mediante pipelines CI/CD automatizados con Docker y GitHub Actions.",
+      "result": "Una plataforma profesional que unifica su oferta de servicios y la experiencia de su comunidad."
     },
-    "projects": {
-      "frontend": {
-        "minemuHostingWeb": {
-          "title": "Minemu Hosting",
-          "description": "Sitio web principal de Minemu Hosting, donde ofrecen servicios de hosting para minecraft y tienen una network para su comunidad."
-        },
-        "kailandWeb": {
-          "title": "Kailand",
-          "description": "Este sitio web cuenta con varias secciones que permiten a los usuarios de Kailand acceder a las redes sociales, descargar el launcher y explorar una wiki con información sobre los ítems y demás recursos personalizados del servidor."
-        }
-      },
-      "backend": {
-        "appGatoBot": {
-          "title": "GatoBot",
-          "description": "Bot de Discord en Python con un sistema de despliegue automatizado. Al iniciar el proyecto, se despliega un bot de Discord, un servidor API REST, un servicio web estático y un túnel de Cloudflare para brindar acceso a la web y a la API."
-        },
-        "botView": {
-          "title": "BotView",
-          "description": "Esta herramienta te permite generar visualizaciones en tus vídeos, YouTube, Tiktok."
-        }
-      },
-      "desktop": {
-        "kailandLauncher": {
-          "title": "Kailand Launcher",
-          "description": "Launcher para Minecraft Java desarrollado en Python con Flet. Es totalmente automatizado, por lo que el usuario no necesita instalar nada. El launcher preconfigura e instala todo e incluye una sección de configuración y otra de mods client-side para personalizar el juego."
-        },
-        "authGatun": {
-          "title": "AuthGatun 2FA",
-          "description": "Aplicacion 2FA para windows, linux, y macOS, usando c# y Avalonia UI."
-        }
-      },
-      "minecraft": {
-        "muneCratPlugin": {
-          "title": "MuneCraft Plugin",
-          "description": "MuneCrat-Plugin es un completo plugin de servidor Minecraft diseñado para el servidor comunitario MuñeCraft. Integra el juego Minecraft con la autenticación de Discord, proporciona funciones de juego personalizadas y ofrece herramientas administrativas para la gestión de servidores. El plugin requiere que los jugadores vinculen sus cuentas de Discord antes de acceder a las funciones del servidor e implementa un sofisticado sistema de permisos para el control de acceso a las características."
-        },
-        "kailandPluginMinecraft": {
-          "title": "Kailand Plugin",
-          "description": "Este plugin le permite al servidor solo autorizar a una cuenta de minecraft ingresar al servidor de kailand, como sabe cual es la cuenta correcta?, pues tiene una api que recibe los datos de cada usuario del launcher de kailand."
-        }
-      }
+    "kailandWeb": {
+      "title": "Kailand",
+      "description": "Este sitio web cuenta con varias secciones que permiten a los usuarios de Kailand acceder a las redes sociales, descargar el launcher y explorar una wiki con información del servidor.",
+      "problem": "La comunidad Minecraft necesitaba una experiencia centralizada y herramientas propias para acceder, explorar e interactuar con el ecosistema del servidor.",
+      "solution": "Una plataforma web construida con React, Astro y TailwindCSS, integrada con el launcher y los recursos personalizados del servidor.",
+      "result": "Mayor integración entre servicios y una mejor experiencia para los usuarios en todo el ecosistema Kailand."
     },
-    "buttonVariantPublicCode": "Código",
-    "buttonVariantPrivateCode": "Privado",
-    "buttonVariantPublicProject": "Ver en producción",
-    "buttonVariantPrivateProject": "Proyecto Privado",
-    "buttonVariantComingSoon": "Próximamente",
-    "buttonVariantDemo": "Ver Demo"
+    "appGatoBot": {
+      "title": "GatoBot",
+      "description": "Bot de Discord en Python con un sistema de despliegue automatizado. Al iniciar el proyecto, se despliega un bot de Discord, un servidor API REST, un servicio web estático y un túnel de Cloudflare para brindar acceso a la web y a la API."
+    },
+    "botView": {
+      "title": "BotView",
+      "description": "Esta herramienta te permite generar visualizaciones en tus vídeos de YouTube y TikTok."
+    },
+    "kailandLauncher": {
+      "title": "Kailand Launcher",
+      "description": "Launcher para Minecraft Java desarrollado en Python con Flet. Es totalmente automatizado, por lo que el usuario no necesita instalar nada. El launcher preconfigura e instala todo e incluye una sección de configuración y otra de mods client-side para personalizar el juego."
+    },
+    "authGatun": {
+      "title": "AuthGatun 2FA",
+      "description": "Aplicación 2FA para Windows, Linux y macOS, usando C# y Avalonia UI."
+    },
+    "muneCratPlugin": {
+      "title": "MuneCraft Plugin",
+      "description": "MuneCrat-Plugin es un completo plugin de servidor Minecraft diseñado para el servidor comunitario MuñeCraft. Integra el juego Minecraft con la autenticación de Discord, proporciona funciones de juego personalizadas y ofrece herramientas administrativas para la gestión de servidores."
+    },
+    "kailandPluginMinecraft": {
+      "title": "Kailand Plugin",
+      "description": "Este plugin le permite al servidor autorizar solo una cuenta de Minecraft para ingresar al servidor de Kailand mediante una API que recibe los datos de cada usuario desde el launcher."
+    }
+  },
+  "MainHowIWork": {
+    "eyebrow": "Cómo trabajo",
+    "title": "Del problema a producción",
+    "step1": { "title": "Entender el problema", "description": "Comprender objetivos, necesidades y restricciones." },
+    "step2": { "title": "Diseñar una solución", "description": "Evaluar alternativas y tomar decisiones sostenibles." },
+    "step3": { "title": "Construir", "description": "Desarrollar soluciones mantenibles y preparadas para crecer." },
+    "step4": { "title": "Iterar", "description": "Mejorar continuamente el producto en función de nuevas necesidades." }
+  },
+  "MainPrinciples": {
+    "eyebrow": "Principios de ingeniería",
+    "title": "Lo que guía mi trabajo",
+    "p1": "El software debe ser fácil de mantener.",
+    "p2": "La experiencia del usuario importa.",
+    "p3": "La automatización reduce errores.",
+    "p4": "La calidad debe mantenerse incluso a largo plazo.",
+    "p5": "Las decisiones técnicas deben aportar valor al producto."
+  },
+  "MainTechnologies": {
+    "eyebrow": "Tecnologías",
+    "title": "Herramientas con las que trabajo"
+  },
+  "technologies": {
+    "languages": "Lenguajes",
+    "scripting": "Scripting",
+    "frameworks": "Frameworks y Librerías",
+    "tools": "Herramientas y Tecnologías"
+  },
+  "MainCTA": {
+    "title": "¿Necesitas construir o mejorar un producto de software?",
+    "description": "Trabajo con clientes y empresas desarrollando productos mantenibles, escalables y preparados para evolucionar.",
+    "button": "Hablemos sobre tu proyecto"
   },
   "MainFooter": {
-    "description": "Desarrollador de software especializado en soluciones web, desktop y Minecraft",
-    "copyright": "{year} GatoArtStudio. Todos los derechos reservados.",
+    "description": "Software Engineer detrás de GatoArtStudio. Construyendo productos de software mantenibles y escalables.",
+    "copyright": "{year} GatoArtStudio",
     "sectionLinks": "Enlaces",
     "sectionConnect": "Conecta",
     "buttonHome": "Inicio",
-    "buttonSocialNetworks": "Redes Sociales"
+    "buttonSocialNetworks": "Redes Sociales",
+    "buttonProjects": "Proyectos"
   },
   "MainNavbar": {
     "buttonHome": "Inicio",
     "buttonSocial": "Redes",
-    "buttonContact": "Contacto"
+    "buttonProjects": "Proyectos",
+    "buttonContact": "Hablemos"
+  },
+  "projectLabels": {
+    "problem": "Problema",
+    "solution": "Solución",
+    "result": "Resultado",
+    "viewCode": "Ver código",
+    "viewLive": "Ver en vivo"
   }
 }

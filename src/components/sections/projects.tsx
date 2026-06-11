@@ -1,115 +1,81 @@
 "use client"
 
-import {useRef} from "react"
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card"
-import {Badge} from "@/components/ui/badge"
-import {Button} from "@/components/ui/button"
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
-import {ExternalLink, Github, ImageOff} from "lucide-react"
-import {projects} from "@/data/projects-section/projects";
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl"
+import Tag from "@/components/tag"
+import Button from "@/components/button"
+import allProjects, { featuredIds } from "@/data/projects"
 
 export default function Projects() {
-    const t = useTranslations('MainProjects');
-    const projectsRef = useRef<HTMLElement>(null)
+  const t = useTranslations("MainProjects")
+  const pt = useTranslations("projects")
+  const l = useTranslations("projectLabels")
 
-    return (
-        <section id="projects" ref={projectsRef} className="py-24">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold mb-4 animate-on-scroll">{t('title')}</h2>
-                    <div className="h-1 w-20 bg-primary mx-auto rounded-full animate-on-scroll"></div>
-                    <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto animate-on-scroll">
-                        {t('description')}
-                    </p>
+  const featured = allProjects.filter((p) => featuredIds.includes(p.id))
+
+  return (
+    <section id="projects" className="section-padding">
+      <div className="max-w-content mx-auto px-6">
+        <p className="eyebrow mb-3">{t("eyebrow")}</p>
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-fg mb-14 text-balance">
+          {t("title")}
+        </h2>
+
+        <div className="space-y-20">
+          {featured.map((project) => (
+            <div key={project.id}>
+              <h3 className="font-display text-2xl md:text-3xl font-semibold text-fg mb-6">
+                {pt(`${project.id}.title`)}
+              </h3>
+
+              <div className="space-y-5 text-fg-muted text-base leading-relaxed max-w-2xl">
+                <div>
+                  <span className="font-mono text-xs text-accent uppercase tracking-wide">
+                    {l("problem")}
+                  </span>
+                  <p className="mt-1">{pt(`${project.id}.problem`)}</p>
                 </div>
+                <div>
+                  <span className="font-mono text-xs text-accent uppercase tracking-wide">
+                    {l("solution")}
+                  </span>
+                  <p className="mt-1">{pt(`${project.id}.solution`)}</p>
+                </div>
+                <div>
+                  <span className="font-mono text-xs text-accent uppercase tracking-wide">
+                    {l("result")}
+                  </span>
+                  <p className="mt-1">{pt(`${project.id}.result`)}</p>
+                </div>
+              </div>
 
-                <Tabs defaultValue="frontend" className="w-full animate-on-scroll">
-                    <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
-                        <TabsTrigger value="frontend">{t('categories.category1.name')}</TabsTrigger>
-                        <TabsTrigger value="backend">{t('categories.category2.name')}</TabsTrigger>
-                        <TabsTrigger value="desktop">{t('categories.category3.name')}</TabsTrigger>
-                        <TabsTrigger value="minecraft">{t('categories.category4.name')}</TabsTrigger>
-                    </TabsList>
+              <div className="flex flex-wrap gap-2 mt-6">
+                {project.tags.map((tag) => (
+                  <Tag key={tag}>{tag}</Tag>
+                ))}
+              </div>
 
-                    {Object.entries(projects).map(([category, categoryProjects]) => (
-                        <TabsContent key={category} value={category} className="mt-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                {categoryProjects.map((project, index: number) => (
-                                    <Card
-                                        key={project.id}
-                                        className="overflow-hidden flex flex-col border-2 border-muted hover:border-primary transition-all duration-300"
-                                    >
-                                        <div className="relative aspect-video w-full overflow-hidden">
-                                            {project.image ? (
-                                                <img
-                                                    src={project.image || "/placeholder.png"}
-                                                    alt={t(`projects.${category}.${project.id}.title`)}
-                                                    className="object-cover w-auto min-w-full transition-transform duration-500 hover:scale-105"
-                                                />
-                                            ) : (
-                                                <div
-                                                    className="w-full h-full bg-muted animate-pulse flex flex-col justify-center items-center gap-2">
-                                                    <ImageOff/>
-                                                    <p>
-                                                        {t('imageProjectNotFound')}
-                                                    </p>
-                                                </div>
-                                            )}
-                                        </div>
-                                        <CardHeader>
-                                            <CardTitle>
-                                                {t(`projects.${category}.${project.id}.title`)}
-                                            </CardTitle>
-                                            <CardDescription>
-                                                {t(`projects.${category}.${project.id}.description`)}
-                                            </CardDescription>
-                                        </CardHeader>
-                                        <CardContent className="mt-auto">
-                                            <div className="flex flex-wrap gap-2">
-                                                {project.tags.map((tag: string, tagIndex: number) => (
-                                                    <Badge key={tagIndex} variant="secondary">
-                                                        {tag}
-                                                    </Badge>
-                                                ))}
-                                            </div>
-                                        </CardContent>
-                                        <CardFooter className="flex justify-between">
-                                            {project.repoUrl ? (
-                                                <Button variant="outline" size="sm" asChild>
-                                                    <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                                                        <Github className="mr-2 h-4 w-4"/>
-                                                        {t('buttonVariantPublicCode')}
-                                                    </a>
-                                                </Button>
-                                            ) : (
-                                                <Button variant="outline" size="sm" disabled>
-                                                    <Github className="mr-2 h-4 w-4"/>
-                                                    {t('buttonVariantPrivateCode')}
-                                                </Button>
-                                            )}
-                                            {project.productionUrl ? (
-                                                <Button size="sm" asChild>
-                                                    <a href={project.productionUrl} target="_blank"
-                                                       rel="noopener noreferrer">
-                                                        <ExternalLink className="mr-2 h-4 w-4"/>
-                                                        {t('buttonVariantPublicProject')}
-                                                    </a>
-                                                </Button>
-                                            ) : (
-                                                <Button size="sm" disabled>
-                                                    <ExternalLink className="mr-2 h-4 w-4"/>
-                                                    {t('buttonVariantPrivateProject')}
-                                                </Button>
-                                            )}
-                                        </CardFooter>
-                                    </Card>
-                                ))}
-                            </div>
-                        </TabsContent>
-                    ))}
-                </Tabs>
+              <div className="flex flex-wrap gap-3 mt-6">
+                {project.repoUrl && (
+                  <Button href={project.repoUrl} variant="outline">
+                    {l("viewCode")}
+                  </Button>
+                )}
+                {project.productionUrl && (
+                  <Button href={project.productionUrl} variant="outline">
+                    {l("viewLive")}
+                  </Button>
+                )}
+              </div>
             </div>
-        </section>
-    )
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <Button href="/projects" variant="outline">
+            {t("viewAll")}
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
 }

@@ -1,70 +1,22 @@
 "use client"
 
-import {useRef} from "react"
-import Image from "next/image"
-import {Card, CardContent} from "@/components/ui/card"
-import {useTranslations} from 'next-intl'
+import { useTranslations } from "next-intl"
 
 export default function About() {
-    const t = useTranslations('MainAbout');
-    const aboutRef = useRef<HTMLElement>(null)
+  const t = useTranslations("MainAbout")
 
-    return (
-        <section id="about" ref={aboutRef} className="py-24 bg-muted/10">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold mb-4 animate-on-scroll">{t('title')}</h2>
-                    <div className="h-1 w-20 bg-primary mx-auto rounded-full animate-on-scroll"></div>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className="order-2 lg:order-1 animate-on-scroll">
-                        <h3 className="text-2xl font-bold mb-6 text-primary">Hervis Cortes</h3>
-                        <p className="text-lg mb-6 text-muted-foreground">
-                            {t.rich('description.part1', {
-                                name: (chunks) => (
-                                    <span className="font-semibold text-foreground">{chunks}</span>
-                                ),
-                                alias: (chunks) => (
-                                    <span className="font-semibold text-foreground">{chunks}</span>
-                                )
-                            })}
-                        </p>
-                        <p className="text-lg mb-6 text-muted-foreground">
-                            {t('description.part2')}
-                        </p>
-                        <p className="text-lg mb-6 text-muted-foreground">
-                            {t('description.part3')}
-                        </p>
-                        <p className="text-lg text-muted-foreground">
-                            {t('description.part4')}
-                        </p>
-                    </div>
-
-                    <div className="order-1 lg:order-2 animate-on-scroll">
-                        <Card
-                            className="overflow-hidden border-2 border-muted hover:border-primary transition-all duration-300">
-                            <CardContent className="p-0">
-                                <div className="relative aspect-square w-full max-w-md mx-auto">
-                                    <Image
-                                        src="/Logo.png?height=500&width=500"
-                                        alt={t('photo.alt')}
-                                        width={500}
-                                        height={500}
-                                        className="object-cover"
-                                    />
-                                    <div
-                                        className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
-                                    <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
-                                        <h4 className="text-xl font-bold">GatoArtStudio</h4>
-                                        <p className="text-sm text-muted-foreground">{t('photo.description')}</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
+  return (
+    <section id="about" className="section-padding">
+      <div className="max-w-content mx-auto px-6">
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-fg mb-8 text-balance">
+          {t("title")}
+        </h2>
+        <div className="space-y-5 text-fg-muted text-base md:text-lg leading-relaxed max-w-2xl">
+          <p>{t("p1")}</p>
+          <p>{t("p2")}</p>
+          <p>{t("p3")}</p>
+        </div>
+      </div>
+    </section>
+  )
 }

@@ -1,102 +1,87 @@
 "use client"
 
-import {useEffect} from "react"
 import Link from "next/link"
-import {gsap} from "gsap"
-import {Github, Linkedin, Twitter} from "lucide-react"
-import {ROUTES} from "@/lib/routes"
-import {useTranslations, useLocale} from "next-intl";
+import { useTranslations } from "next-intl"
+import { usePathname } from "next/navigation"
 
 export default function Footer() {
-    const t = useTranslations('MainFooter');
-    const locale = useLocale();
-    useEffect(() => {
-        // Animate footer on scroll into view
-        gsap.from(".footer", {
-            scrollTrigger: {
-                trigger: ".footer",
-                start: "top bottom",
-                toggleActions: "play none none none",
-            },
-            opacity: 0,
-            y: 50,
-            duration: 0.8,
-            ease: "power2.out",
-        })
-    }, [])
+  const t = useTranslations("MainFooter")
+  const pathname = usePathname()
+  const locale = pathname.split("/")[1] || "en"
+  const year = new Date().getFullYear()
 
-    return (
-        <footer className="footer bg-muted/30 border-t border-border">
-            <div className="container mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div>
-                        <Link href={`/${locale}${ROUTES.PAGES.HOME.URL}`} className="inline-block mb-4">
-              <span
-                  className="text-2xl font-bold bg-gradient-to-r from-primary to-cyan-300 text-transparent bg-clip-text">
-                GatoArtStudio
-              </span>
-                        </Link>
-                        <p className="text-muted-foreground max-w-xs">
-                            {t('description')}
-                        </p>
-                    </div>
+  return (
+    <footer className="border-t border-border py-12">
+      <div className="max-w-wide mx-auto px-6">
+        <div className="flex flex-col md:flex-row md:justify-between gap-10">
+          <div className="max-w-xs">
+            <p className="font-display text-lg font-semibold text-fg mb-2">GatoArtStudio</p>
+            <p className="text-fg-muted text-sm leading-relaxed">{t("description")}</p>
+          </div>
 
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4">{t('sectionLinks')}</h3>
-                        <ul className="space-y-2">
-                            <li>
-                                <Link href={`/${locale}${ROUTES.PAGES.HOME.URL}`}
-                                      className="text-muted-foreground hover:text-primary transition-colors">
-                                    {t('buttonHome')}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={`/${locale}${ROUTES.PAGES.REDES.URL}`}
-                                      className="text-muted-foreground hover:text-primary transition-colors">
-                                    {t('buttonSocialNetworks')}
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4">{t('sectionConnect')}</h3>
-                        <div className="flex space-x-4">
-                            <a
-                                href={ROUTES.OTHERS.GITHUB.URL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-muted-foreground hover:text-primary transition-colors"
-                            >
-                                <Github className="h-6 w-6"/>
-                                <span className="sr-only">GitHub</span>
-                            </a>
-                            <a
-                                href={ROUTES.OTHERS.TWITTER.URL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-muted-foreground hover:text-primary transition-colors"
-                            >
-                                <Twitter className="h-6 w-6"/>
-                                <span className="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href={ROUTES.OTHERS.LINKEDIN.URL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-muted-foreground hover:text-primary transition-colors"
-                            >
-                                <Linkedin className="h-6 w-6"/>
-                                <span className="sr-only">LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-                    <p>&copy; {t('copyright', {year: new Date().getFullYear()})}</p>
-                </div>
+          <div>
+            <p className="font-mono text-xs text-accent uppercase tracking-wide mb-3">
+              {t("sectionLinks")}
+            </p>
+            <div className="space-y-2">
+              <Link
+                href={`/${locale}`}
+                className="block text-sm text-fg-muted hover:text-fg underline-draw w-fit transition-colors"
+              >
+                {t("buttonHome")}
+              </Link>
+              <Link
+                href={`/${locale}/projects`}
+                className="block text-sm text-fg-muted hover:text-fg underline-draw w-fit transition-colors"
+              >
+                {t("buttonProjects")}
+              </Link>
+              <Link
+                href={`/${locale}/redes`}
+                className="block text-sm text-fg-muted hover:text-fg underline-draw w-fit transition-colors"
+              >
+                {t("buttonSocialNetworks")}
+              </Link>
             </div>
-        </footer>
-    )
+          </div>
+
+          <div>
+            <p className="font-mono text-xs text-accent uppercase tracking-wide mb-3">
+              {t("sectionConnect")}
+            </p>
+            <div className="space-y-2">
+              <a
+                href="https://github.com/GatoArtStudio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-fg-muted hover:text-fg underline-draw w-fit transition-colors"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/hervis-cortes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-fg-muted hover:text-fg underline-draw w-fit transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://twitter.com/GatoArtStudio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-fg-muted hover:text-fg underline-draw w-fit transition-colors"
+              >
+                Twitter
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p className="mt-12 pt-6 border-t border-border font-mono text-xs text-fg-muted">
+          {t("copyright", { year })}
+        </p>
+      </div>
+    </footer>
+  )
 }

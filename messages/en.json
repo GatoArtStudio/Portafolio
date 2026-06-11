@@ -1,209 +1,186 @@
 {
   "Metadata": {
-    "title": "Product-Focused Software Developer",
-    "description": "Portfolio of Hervis Cortes, also known as GatoArtStudio. Software developer specialized in web development, desktop applications, and Minecraft development.",
-    "keywords": "GatoArtStudio, Hervis Cortes, Software Developer, Full Stack, Web Development, Desktop Applications, Minecraft Development, Portfolio, Programmer, Developer, Product Engineer"
+    "title": "Software Engineer — Product-Focused",
+    "description": "Hervis Cortes, creator of GatoArtStudio. Software Engineer focused on building maintainable and scalable software products that solve real problems."
   },
   "SocialNetworksMetadata": {
     "title": "Social Networks",
-    "description": "Find GatoArtStudio across all platforms and social networks. Follow me to stay up to date with my projects and content.",
-    "keywords": "GatoArtStudio, Hervis Cortes, Social Networks, GitHub, LinkedIn, Twitter, Instagram, Facebook, YouTube, Twitch, WhatsApp, Discord, TikTok, Patreon"
+    "description": "Find GatoArtStudio across all platforms and social networks.",
+    "keywords": "GatoArtStudio, Hervis Cortes, Social Networks, GitHub, LinkedIn, Twitter, Instagram, YouTube, Twitch, Discord, TikTok"
   },
-  "PageMain": {
+  "ProjectsMetadata": {
+    "title": "Projects",
+    "description": "All software projects developed by GatoArtStudio across frontend, backend, desktop, and Minecraft."
   },
+  "PageMain": {},
   "PageSocialNetworks": {
     "title": "Connect with me",
-    "description": "Find GatoArtStudio on all platforms and social media. Follow me to stay up to date with my projects and content!",
+    "description": "Find GatoArtStudio on all platforms and social media.",
     "links": {
-      "github": {
-        "description": "Code repositories and open-source contributions"
-      },
-      "linkedin": {
-        "description": "Professional profile and career connections"
-      },
-      "twitter": {
-        "description": "Updates and discussions about technology"
-      },
-      "instagram": {
-        "description": "Moments from my creative journey"
-      },
-      "facebook": {
-        "description": "Community and personal updates"
-      },
-      "youtube": {
-        "description": "Programming tutorials and coding sessions"
-      },
-      "twitch": {
-        "description": "Live programming and gaming streams"
-      },
-      "whatsapp": {
-        "description": "Direct contact and fast communication"
-      },
-      "discord": {
-        "description": "Join my server to chat and collaborate"
-      },
-      "tiktok": {
-        "description": "Short videos about development and technology"
-      },
-      "patreon": {
-        "description": "Support my work and access exclusive content"
-      }
+      "github": { "description": "Code repositories and open-source contributions" },
+      "linkedin": { "description": "Professional profile and career connections" },
+      "twitter": { "description": "Updates and discussions about technology" },
+      "instagram": { "description": "Moments from my creative journey" },
+      "facebook": { "description": "Community and personal updates" },
+      "youtube": { "description": "Programming tutorials and coding sessions" },
+      "twitch": { "description": "Live programming and gaming streams" },
+      "whatsapp": { "description": "Direct contact and fast communication" },
+      "discord": { "description": "Join my server to chat and collaborate" },
+      "tiktok": { "description": "Short videos about development and technology" },
+      "patreon": { "description": "Support my work and access exclusive content" }
     },
     "buttonCardVisitSocial": "Visit {platform}"
   },
+  "PageProjects": {
+    "title": "All projects",
+    "description": "A complete catalog of software products and systems I've built.",
+    "backToHome": "Back to home"
+  },
   "MainHero": {
-    "title": "Hello, I am",
-    "subtitle": "Product-Focused Software Developer",
-    "description": "Building complete digital products and software systems, from architecture to deployment, under the GatoArtStudio brand.",
-    "buttonProjects": "View Projects",
-    "buttonContact": "Contact Me"
+    "eyebrow": "Software Engineer",
+    "name": "Hervis Cortes",
+    "headline": "I build maintainable and scalable software products that solve real problems.",
+    "description": "Software Engineer behind GatoArtStudio. I develop digital products, tools, and systems — from architecture to production.",
+    "buttonProjects": "View projects",
+    "buttonContact": "Let's talk"
   },
   "MainAbout": {
-    "title": "About Me",
-    "description": {
-      "part1": "I’m <name>Hervis Cortes</name>, a Colombian software developer and creator of <alias>GatoArtStudio</alias>, a personal brand focused on software development and digital product building.",
-      "part2": "I primarily work with C#, Java, and TypeScript, developing web applications, desktop tools, automations, and systems for Minecraft ecosystems.",
-      "part3": "I also have experience with modern frontend technologies such as React, Next.js, and TailwindCSS, alongside development workflows based on Git, GitHub, CI/CD, and DevOps practices.",
-      "part4": "My approach is focused on building maintainable, scalable, and technically solid products and systems, covering everything from architecture to deployment."
+    "title": "Software Engineer",
+    "p1": "I'm Hervis Cortes, creator of GatoArtStudio, a personal brand from which I develop software products and systems for clients and companies.",
+    "p2": "My work is focused on building maintainable solutions, ready to evolve over time. I've worked on web applications, desktop tools, automations, and Minecraft ecosystems, covering everything from architecture and development to continuous delivery and deployment.",
+    "p3": "My approach centers on quality, maintainability, and building products capable of growing alongside business needs."
+  },
+  "MainExperience": {
+    "eyebrow": "Experience",
+    "title": "Results, not just technologies",
+    "resultsLabel": "Results"
+  },
+  "experience": {
+    "minemu": {
+      "role": "Founding Product Engineer",
+      "period": "January 2025 — Present",
+      "description": "I participate in the design and evolution of the platform, developing new features, internal tools, and automations to optimize operational flows.",
+      "result1": "Implementation of CI/CD pipelines to automate deployments.",
+      "result2": "Development of internal tools integrated with Discord and Pterodactyl.",
+      "result3": "Design of backend architectures prepared for product growth.",
+      "result4": "Administration and deployment of services using Docker."
     },
-    "photo": {
-      "alt": "Photo of GatoArtStudio Logo",
-      "description": "Product-Focused Software Developer"
-    }
-  },
-  "MainSkills": {
-    "title": "My Skills",
-    "description": "A diverse set of technical and professional skills that allow me to tackle complex projects and deliver high-quality solutions.",
-    "cards": {
-      "skill1": {
-        "title": "Development and Programming",
-        "features": {
-          "feature1": "Web development front-end and back-end",
-          "feature2": "Desktop applications",
-          "feature3": "Development of plugins and mods for Minecraft",
-          "feature4": "Programming bots for Discord and Twitch"
-        }
-      },
-      "skill2": {
-        "title": "Design and 3D Modeling",
-        "features": {
-          "feature1": "3D modeling for Nexo and mods",
-          "feature2": "Creation of resourcepacks"
-        }
-      },
-      "skill3": {
-        "title": "Server Administration and DevOps",
-        "features": {
-          "feature1": "Management and configuration of VPS and Minecraft servers",
-          "feature2": "Implementation and use of Docker",
-          "feature3": "Automation of tasks and continuous deployment (CI/CD) with DevOps practices"
-        }
-      },
-      "skill4": {
-        "title": "Soft Skills",
-        "features": {
-          "feature1": "Teamwork and collaboration",
-          "feature2": "Problem-solving and analytical thinking"
-        }
-      }
-    }
-  },
-  "MainTechnologies": {
-    "title": "Technologies and Tools",
-    "description": "The technologies and tools I use to create efficient and modern digital solutions.",
-    "categories": {
-      "category1": {
-        "name": "Languages"
-      },
-      "category2": {
-        "name": "Scripting"
-      },
-      "category3": {
-        "name": "Frameworks"
-      },
-      "category4": {
-        "name": "Tools"
-      }
+    "authgatun": {
+      "role": "Software Engineer",
+      "period": "2024 — Present",
+      "description": "Multi-platform application focused on secure 2FA key management.",
+      "result1": "Development of a modern, multi-platform desktop application.",
+      "result2": "Design of an architecture focused on maintainability and separation of concerns.",
+      "result3": "Automation of continuous integration and deployment.",
+      "result4": "Implementation of secure local storage."
+    },
+    "kailand": {
+      "role": "Freelance Software Engineer",
+      "period": "January 2024 — December 2025",
+      "description": "Participation in the development of the project's digital ecosystem.",
+      "result1": "Development of the desktop launcher.",
+      "result2": "Construction and maintenance of the web platform.",
+      "result3": "Development of custom plugins and mods.",
+      "result4": "API and internal tool integrations for community management."
     }
   },
   "MainProjects": {
-    "title": "My Projects",
-    "description": "A selection of projects that demonstrate my skills and experience in different areas of development.",
-    "imageProjectNotFound": "Project image not found",
-    "categories": {
-      "category1": {
-        "name": "Frontend"
-      },
-      "category2": {
-        "name": "Backend"
-      },
-      "category3": {
-        "name": "Desktop"
-      },
-      "category4": {
-        "name": "Minecraft"
-      }
+    "eyebrow": "Featured projects",
+    "title": "Case studies",
+    "viewAll": "View all projects"
+  },
+  "projects": {
+    "minemuHostingWeb": {
+      "title": "Minemu Hosting",
+      "description": "Minemu Hosting's main website, where they offer hosting services for Minecraft and have a network for their community.",
+      "problem": "The hosting service needed a modern web presence that reflected their brand and integrated with their Minecraft community network.",
+      "solution": "A full website built with React, Astro, and TailwindCSS, deployed through automated CI/CD pipelines using Docker and GitHub Actions.",
+      "result": "A professional platform that unifies their service offering and community experience."
     },
-    "projects": {
-      "frontend": {
-        "minemuHostingWeb": {
-          "title": "Minemu Hosting",
-          "description": "Minemu Hosting's main website, where they offer hosting services for Minecraft and have a network for their community."
-        },
-        "kailandWeb": {
-          "title": "Kailand",
-          "description": "This website has several sections that allow Kailand users to access social networks, download the launcher, and explore a wiki with information about items and other custom server resources."
-        }
-      },
-      "backend": {
-        "appGatoBot": {
-          "title": "GatoBot",
-          "description": "Discord bot in Python with an automated deployment system. When the project starts, a Discord bot, a REST API server, a static web service, and a Cloudflare tunnel are deployed to provide web and API access."
-        },
-        "botView": {
-          "title": "BotView",
-          "description": "This tool allows you to generate views on your videos, YouTube, TikTok."
-        }
-      },
-      "desktop": {
-        "kailandLauncher": {
-          "title": "Kailand Launcher",
-          "description": "A launcher for Minecraft Java developed in Python with Flet. It's fully automated, so the user doesn't need to install anything. The launcher pre-configures and installs everything and includes a settings section and a client-side mods section for customizing the game."
-        },
-        "authGatun": {
-          "title": "AuthGatun 2FA",
-          "description": "2FA application for Windows, Linux, and macOS, using C# and Avalonia UI."
-        }
-      },
-      "minecraft": {
-        "muneCratPlugin": {
-          "title": "MuneCraft Plugin",
-          "description": "MuneCrat-Plugin is a comprehensive Minecraft server plugin designed for the MuñeCraft community server. It integrates Minecraft with Discord authentication, provides custom gameplay features, and offers administrative tools for server management. The plugin requires players to link their Discord accounts before accessing server features and implements a sophisticated permissions system to control access to those features."
-        },
-        "kailandPluginMinecraft": {
-          "title": "Kailand Plugin",
-          "description": "This plugin allows the server to only authorize one Minecraft account to enter the Kailand server. How does it know which is the correct account? Well, it has an API that receives the data of each user from the Kailand launcher."
-        }
-      }
+    "kailandWeb": {
+      "title": "Kailand",
+      "description": "This website has several sections that allow Kailand users to access social networks, download the launcher, and explore a wiki with server information.",
+      "problem": "The Minecraft community needed a centralized experience with their own tools to access, explore, and engage with the server ecosystem.",
+      "solution": "A web platform built with React, Astro, and TailwindCSS, integrated with the launcher and custom server resources.",
+      "result": "Greater integration between services and a better experience for users across the entire Kailand ecosystem."
     },
-    "buttonVariantPublicCode": "Code",
-    "buttonVariantPrivateCode": "Private",
-    "buttonVariantPublicProject": "View Live",
-    "buttonVariantPrivateProject": "Private Project",
-    "buttonVariantComingSoon": "Coming Soon",
-    "buttonVariantDemo": "View Demo"
+    "appGatoBot": {
+      "title": "GatoBot",
+      "description": "Discord bot in Python with an automated deployment system. When the project starts, a Discord bot, a REST API server, a static web service, and a Cloudflare tunnel are deployed to provide web and API access."
+    },
+    "botView": {
+      "title": "BotView",
+      "description": "This tool allows you to generate views on your videos on YouTube and TikTok."
+    },
+    "kailandLauncher": {
+      "title": "Kailand Launcher",
+      "description": "A launcher for Minecraft Java developed in Python with Flet. It's fully automated, so the user doesn't need to install anything. The launcher pre-configures and installs everything and includes a settings section and a client-side mods section for customizing the game."
+    },
+    "authGatun": {
+      "title": "AuthGatun 2FA",
+      "description": "2FA application for Windows, Linux, and macOS, using C# and Avalonia UI."
+    },
+    "muneCratPlugin": {
+      "title": "MuneCraft Plugin",
+      "description": "MuneCrat-Plugin is a comprehensive Minecraft server plugin designed for the MuñeCraft community server. It integrates Minecraft with Discord authentication, provides custom gameplay features, and offers administrative tools for server management."
+    },
+    "kailandPluginMinecraft": {
+      "title": "Kailand Plugin",
+      "description": "This plugin allows the server to only authorize one Minecraft account to enter the Kailand server by using an API that receives user data from the launcher."
+    }
+  },
+  "MainHowIWork": {
+    "eyebrow": "How I work",
+    "title": "From problem to production",
+    "step1": { "title": "Understand the problem", "description": "Understand objectives, needs, and constraints." },
+    "step2": { "title": "Design a solution", "description": "Evaluate alternatives and make sustainable decisions." },
+    "step3": { "title": "Build", "description": "Develop maintainable solutions ready to grow." },
+    "step4": { "title": "Iterate", "description": "Continuously improve the product based on new needs." }
+  },
+  "MainPrinciples": {
+    "eyebrow": "Engineering principles",
+    "title": "What guides my work",
+    "p1": "Software should be easy to maintain.",
+    "p2": "User experience matters.",
+    "p3": "Automation reduces errors.",
+    "p4": "Quality must be maintained even in the long term.",
+    "p5": "Technical decisions should add value to the product."
+  },
+  "MainTechnologies": {
+    "eyebrow": "Technologies",
+    "title": "Tools I work with"
+  },
+  "technologies": {
+    "languages": "Languages",
+    "scripting": "Scripting",
+    "frameworks": "Frameworks & Libraries",
+    "tools": "Tools & Technologies"
+  },
+  "MainCTA": {
+    "title": "Need to build or improve a software product?",
+    "description": "I work with clients and companies developing maintainable, scalable products ready to evolve.",
+    "button": "Let's talk about your project"
   },
   "MainFooter": {
-    "description": "Software developer specializing in web, desktop, and Minecraft solutions",
-    "copyright": "{year} GatoArtStudio. All rights reserved.",
+    "description": "Software Engineer behind GatoArtStudio. Building maintainable and scalable software products.",
+    "copyright": "{year} GatoArtStudio",
     "sectionLinks": "Links",
     "sectionConnect": "Connect",
     "buttonHome": "Home",
-    "buttonSocialNetworks": "Social Networks"
+    "buttonSocialNetworks": "Social Networks",
+    "buttonProjects": "Projects"
   },
   "MainNavbar": {
     "buttonHome": "Home",
     "buttonSocial": "Socials",
-    "buttonContact": "Contact"
+    "buttonProjects": "Projects",
+    "buttonContact": "Let's talk"
+  },
+  "projectLabels": {
+    "problem": "Problem",
+    "solution": "Solution",
+    "result": "Result",
+    "viewCode": "View code",
+    "viewLive": "View live"
   }
 }

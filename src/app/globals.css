@@ -3,44 +3,115 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --background: 222 47% 11%;
-        --foreground: 210 40% 98%;
+  :root {
+    --bg: 222 47% 11%;
+    --fg: 210 40% 98%;
+    --fg-muted: 215 20% 65%;
+    --surface: 217 32% 17%;
+    --accent: 184 100% 50%;
+    --accent-soft: 184 100% 50% / 0.10;
+    --border: 217 32% 17%;
+  }
 
-        --card: 222 47% 11%;
-        --card-foreground: 210 40% 98%;
+  * {
+    box-sizing: border-box;
+  }
 
-        --popover: 222 47% 11%;
-        --popover-foreground: 210 40% 98%;
+  html {
+    scroll-behavior: smooth;
+    background-color: hsl(var(--bg));
+    color: hsl(var(--fg));
+  }
 
-        --primary: 184 100% 50%;
-        --primary-foreground: 222 47% 11%;
+  body {
+    background-color: hsl(var(--bg));
+    color: hsl(var(--fg));
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-        --secondary: 217 32% 17%;
-        --secondary-foreground: 210 40% 98%;
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--bg));
+  }
 
-        --muted: 217 32% 17%;
-        --muted-foreground: 215 20% 65%;
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 2px;
+  }
 
-        --accent: 217 32% 17%;
-        --accent-foreground: 210 40% 98%;
-
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 210 40% 98%;
-
-        --border: 217 32% 17%;
-        --input: 217 32% 17%;
-        --ring: 184 100% 50%;
-
-        --radius: 0.5rem;
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
     }
+  }
 }
 
-@layer base {
-    * {
-        @apply border-border;
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: hsl(var(--fg-muted));
+  }
+
+  .blueprint-line {
+    stroke: hsl(var(--accent));
+    opacity: 0.25;
+    fill: none;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
     }
-    body {
-        @apply bg-background text-foreground;
-    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .underline-draw {
+    position: relative;
+  }
+  .underline-draw::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: hsl(var(--accent));
+    transition: width 0.3s ease;
+  }
+  .underline-draw:hover::after {
+    width: 100%;
+  }
 }
