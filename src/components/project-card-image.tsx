@@ -1,3 +1,5 @@
+import SmartImage from "@/components/smart-image"
+
 type Props = {
   src?: string
   alt: string
@@ -18,12 +20,11 @@ function getMonogram(title: string) {
 export default function ProjectCardImage({ src, alt, title }: Props) {
   if (src) {
     return (
-      <div className="mb-5 -mx-6 -mt-6 rounded-t-md overflow-hidden">
-        <img
+      <div className="mb-5 -mx-6 -mt-6 rounded-t-md overflow-hidden bg-surface/40">
+        <SmartImage
           src={src}
           alt={alt}
           className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
-          loading="lazy"
         />
       </div>
     )

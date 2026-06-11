@@ -4,18 +4,26 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useTranslations } from "next-intl"
 import LanguageSwitcher from "@/components/language-switcher"
-import { useScrollProgress } from "@/hooks/use-scroll"
+import { useScrollProgress, useMounted } from "@/hooks/use-scroll"
 import { useState } from "react"
+
+type NavItem = {
+  href: string
+  label: string
+  isAnchor?: boolean
+}
 
 export default function Navbar() {
   const t = useTranslations("MainNavbar")
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const { progress, scrolled } = useScrollProgress()
+  const mounted = useMounted()
   const locale = pathname.split("/")[1] || "en"
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { href: `/${locale}`, label: t("buttonHome") },
+    { href: `/${locale}#experience`, label: t("buttonExperience"), isAnchor: true },
     { href: `/${locale}/projects`, label: t("buttonProjects") },
     { href: `/${locale}/redes`, label: t("buttonSocial") },
   ]
@@ -24,13 +32,15 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-lg border-b border-border/60 transition-all duration-300 ${
-          scrolled ? "h-12 shadow-[0_2px_8px_rgba(0,0,0,0.4)]" : "h-14 shadow-[0_1px_3px_rgba(0,0,0,0.3)]"
+          mounted && scrolled
+            ? "h-12 shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
+            : "h-14 shadow-[0_1px_3px_rgba(0,0,0,0.3)]"
         }`}
       >
         {/* Scroll progress bar */}
         <div
           className="absolute bottom-0 left-0 h-px bg-accent transition-[width] duration-100 ease-out"
-          style={{ width: `${progress}%` }}
+          style={{ width: mounted ? `${progress}%` : "0%" }}
           aria-hidden="true"
         />
 
@@ -44,10 +54,12 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => {
-              const isActive =
-                item.href === `/${locale}`
-                  ? pathname === `/${locale}`
-                  : pathname.startsWith(item.href)
+              const basePath = item.href.split("#")[0]
+              const isActive = item.isAnchor
+                ? pathname === basePath
+                : basePath === `/${locale}`
+                ? pathname === `/${locale}`
+                : pathname.startsWith(basePath)
 
               return (
                 <Link

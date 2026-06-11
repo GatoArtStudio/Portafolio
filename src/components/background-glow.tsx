@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState, useCallback } from "react"
+import { useMounted } from "@/hooks/use-scroll"
 
 type Props = {
   variant?: "full" | "reduced"
@@ -14,6 +15,7 @@ export default function BackgroundGlow({ variant = "full" }: Props) {
   const lastMoveRef = useRef<number>(0)
   const currentRef = useRef({ a: { x: -500, y: -500 }, b: { x: -500, y: -500 } })
   const [isTouch, setIsTouch] = useState(false)
+  const mounted = useMounted()
 
   const lerp = (a: number, b: number, t: number) => a + (b - a) * t
 
@@ -67,7 +69,7 @@ export default function BackgroundGlow({ variant = "full" }: Props) {
   }, [animate, isTouch])
 
   const isReduced = variant === "reduced"
-  const showMouseOrbs = !isTouch
+  const showMouseOrbs = mounted && !isTouch
 
   const particles = isReduced
     ? [

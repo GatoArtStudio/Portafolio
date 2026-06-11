@@ -175,6 +175,7 @@
   },
   "MainNavbar": {
     "buttonHome": "Home",
+    "buttonExperience": "Experience",
     "buttonSocial": "Socials",
     "buttonProjects": "Projects",
     "buttonContact": "Let's talk"
@@ -185,5 +186,15 @@
     "result": "Result",
     "viewCode": "View code",
     "viewLive": "View live"
+  },
+  "SectionNav": {
+    "hero": "Hero",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "how-i-work": "Process",
+    "principles": "Principles",
+    "technologies": "Stack",
+    "contact": "Contact"
   }
 }

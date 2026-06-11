@@ -175,6 +175,7 @@
   },
   "MainNavbar": {
     "buttonHome": "Inicio",
+    "buttonExperience": "Experiencia",
     "buttonSocial": "Redes",
     "buttonProjects": "Proyectos",
     "buttonContact": "Hablemos"
@@ -185,5 +186,15 @@
     "result": "Resultado",
     "viewCode": "Ver código",
     "viewLive": "Ver en vivo"
+  },
+  "SectionNav": {
+    "hero": "Inicio",
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "how-i-work": "Proceso",
+    "principles": "Principios",
+    "technologies": "Stack",
+    "contact": "Contacto"
   }
 }

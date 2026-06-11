@@ -14,6 +14,7 @@ import CTA from "@/components/sections/cta"
 import BlueprintDivider from "@/components/blueprint-divider"
 import BackgroundGlow from "@/components/background-glow"
 import BackToTop from "@/components/back-to-top"
+import SectionNav from "@/components/section-nav"
 
 export default function PageWrapper() {
   useEffect(() => {
@@ -53,6 +54,7 @@ export default function PageWrapper() {
       </main>
       <Footer />
       <BackToTop />
+      <SectionNav />
     </div>
   )
 }
