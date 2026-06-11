@@ -53,6 +53,24 @@ export default function BackgroundGlow({ variant = "full" }: Props) {
 
   const isReduced = variant === "reduced"
 
+  const particles = isReduced
+    ? [
+        { type: "dot", size: "3px", opacity: "0.06", blur: "2px", anim: "particle-drift-1", dur: "45s", delay: "-10s" },
+        { type: "ring", size: "12px", opacity: "0.04", blur: "2px", anim: "particle-drift-2", dur: "55s", delay: "-30s" },
+        { type: "dot", size: "2px", opacity: "0.05", blur: "1px", anim: "particle-drift-3", dur: "40s", delay: "-15s" },
+        { type: "ring", size: "8px", opacity: "0.04", blur: "2px", anim: "particle-drift-4", dur: "50s", delay: "-20s" },
+      ]
+    : [
+        { type: "dot", size: "3px", opacity: "0.08", blur: "2px", anim: "particle-drift-1", dur: "45s", delay: "-5s" },
+        { type: "ring", size: "14px", opacity: "0.05", blur: "3px", anim: "particle-drift-2", dur: "55s", delay: "-30s" },
+        { type: "dot", size: "2px", opacity: "0.06", blur: "2px", anim: "particle-drift-3", dur: "38s", delay: "-12s" },
+        { type: "ring", size: "10px", opacity: "0.04", blur: "2px", anim: "particle-drift-4", dur: "50s", delay: "-25s" },
+        { type: "dot", size: "5px", opacity: "0.07", blur: "3px", anim: "particle-drift-2", dur: "42s", delay: "-8s" },
+        { type: "ring", size: "8px", opacity: "0.05", blur: "2px", anim: "particle-drift-1", dur: "48s", delay: "-35s" },
+        { type: "dot", size: "3px", opacity: "0.06", blur: "2px", anim: "particle-drift-3", dur: "35s", delay: "-18s" },
+        { type: "dot", size: "2px", opacity: "0.05", blur: "2px", anim: "particle-drift-4", dur: "52s", delay: "-40s" },
+      ]
+
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
       {/* Orb A — follows mouse, larger */}
@@ -112,23 +130,39 @@ export default function BackgroundGlow({ variant = "full" }: Props) {
       />
 
       {!isReduced && (
-        <>
-          {/* Orb E — autonomous, top-center */}
+        <div
+          className="absolute animate-float-slow"
+          style={{
+            width: "200px",
+            height: "200px",
+            background: "radial-gradient(circle, hsl(var(--accent) / 0.04) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            left: "55%",
+            top: "15%",
+            animationDuration: "22s",
+            animationDelay: "-5s",
+          }}
+        />
+      )}
+
+      {/* Floating abstract particles */}
+      {particles.map((p, i) => {
+        const cls = p.type === "ring" ? "particle particle-ring" : "particle particle-dot"
+        return (
           <div
-            className="absolute animate-float-slow"
+            key={i}
+            className={cls}
             style={{
-              width: "200px",
-              height: "200px",
-              background: "radial-gradient(circle, hsl(var(--accent) / 0.04) 0%, transparent 70%)",
-              filter: "blur(80px)",
-              left: "55%",
-              top: "15%",
-              animationDuration: "22s",
-              animationDelay: "-5s",
+              width: p.size,
+              height: p.size,
+              opacity: 0,
+              filter: `blur(${p.blur})`,
+              animation: `${p.anim} ${p.dur} linear infinite`,
+              animationDelay: p.delay,
             }}
           />
-        </>
-      )}
+        )
+      })}
     </div>
   )
 }
