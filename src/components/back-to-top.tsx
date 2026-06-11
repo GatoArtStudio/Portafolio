@@ -24,7 +24,14 @@ export default function BackToTop() {
         showButton ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
       }`}
     >
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        aria-hidden="true"
+        suppressHydrationWarning
+      >
         <path
           d="M8 12V4M8 4L4 8M8 4L12 8"
           stroke="currentColor"

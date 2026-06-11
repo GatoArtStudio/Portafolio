@@ -22,28 +22,41 @@ export default function SectionNav() {
   const mounted = useMounted()
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
-            setActive(entry.target.id)
-          }
-        })
-      },
-      { threshold: [0, 0.2, 0.5, 1] }
-    )
+    let rafId = 0
 
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    })
+    const update = () => {
+      rafId = 0
+      const viewportCenter = window.innerHeight / 2
+      let closestId: string = sectionIds[0]
+      let closestDistance = Infinity
 
-    const onScroll = () => setVisible(window.scrollY > 300)
+      for (const id of sectionIds) {
+        const el = document.getElementById(id)
+        if (!el) continue
+        const rect = el.getBoundingClientRect()
+        const sectionCenter = rect.top + rect.height / 2
+        const distance = Math.abs(sectionCenter - viewportCenter)
+        if (distance < closestDistance) {
+          closestDistance = distance
+          closestId = id
+        }
+      }
+
+      setActive(closestId)
+      setVisible(window.scrollY > 300)
+    }
+
+    const onScroll = () => {
+      if (rafId === 0) {
+        rafId = requestAnimationFrame(update)
+      }
+    }
+
     onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
 
     return () => {
-      observer.disconnect()
+      if (rafId) cancelAnimationFrame(rafId)
       window.removeEventListener("scroll", onScroll)
     }
   }, [])
