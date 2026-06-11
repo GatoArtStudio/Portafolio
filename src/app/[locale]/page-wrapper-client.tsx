@@ -12,6 +12,7 @@ import Principles from "@/components/sections/principles"
 import Technologies from "@/components/sections/technologies"
 import CTA from "@/components/sections/cta"
 import BlueprintDivider from "@/components/blueprint-divider"
+import BackgroundGlow from "@/components/background-glow"
 
 export default function PageWrapper() {
   useEffect(() => {
@@ -33,9 +34,10 @@ export default function PageWrapper() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-bg text-fg">
+    <div className="min-h-screen bg-bg text-fg relative">
+      <BackgroundGlow />
       <Navbar />
-      <main className="pt-14">
+      <main className="pt-14 relative z-10">
         <Hero />
         <BlueprintDivider />
         <div className="reveal"><About /></div>

@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import BackgroundGlow from "@/components/background-glow"
 import { useTranslations } from "next-intl"
 import { socialLinks } from "@/data/social/social"
 
@@ -9,10 +10,11 @@ export default function SocialMedia() {
   const t = useTranslations("PageSocialNetworks")
 
   return (
-    <div className="min-h-screen bg-bg text-fg">
+    <div className="min-h-screen bg-bg text-fg relative">
+      <BackgroundGlow variant="reduced" />
       <Navbar />
 
-      <main className="pt-24 pb-16">
+      <main className="pt-24 pb-16 relative z-10">
         <div className="max-w-wide mx-auto px-6">
           <p className="eyebrow mb-3 text-center">{t("title")}</p>
           <p className="text-fg-muted text-base max-w-lg mx-auto text-center mb-14">

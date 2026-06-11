@@ -15,7 +15,7 @@ const base =
 const variants = {
   primary: "bg-accent text-bg shadow-[var(--shadow-button)] hover:opacity-90 hover:shadow-md",
   outline:
-    "border border-accent text-accent hover:bg-accent-soft shadow-[var(--shadow-button)] hover:shadow-md",
+    "border border-accent/60 text-accent bg-surface/50 backdrop-blur-sm hover:bg-accent-soft hover:border-accent shadow-[var(--shadow-button)] hover:shadow-md",
 }
 
 export default function Button({

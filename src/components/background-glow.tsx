@@ -1,0 +1,134 @@
+"use client"
+
+import { useEffect, useRef, useCallback } from "react"
+
+type Props = {
+  variant?: "full" | "reduced"
+}
+
+export default function BackgroundGlow({ variant = "full" }: Props) {
+  const orbARef = useRef<HTMLDivElement>(null)
+  const orbBRef = useRef<HTMLDivElement>(null)
+  const rafRef = useRef<number>(0)
+  const mouseRef = useRef({ x: -500, y: -500 })
+  const currentRef = useRef({ a: { x: -500, y: -500 }, b: { x: -500, y: -500 } })
+
+  const lerp = (a: number, b: number, t: number) => a + (b - a) * t
+
+  const animate = useCallback(() => {
+    const m = mouseRef.current
+    const c = currentRef.current
+
+    c.a.x = lerp(c.a.x, m.x, 0.04)
+    c.a.y = lerp(c.a.y, m.y, 0.04)
+    c.b.x = lerp(c.b.x, m.x, 0.025)
+    c.b.y = lerp(c.b.y, m.y, 0.025)
+
+    if (orbARef.current) {
+      orbARef.current.style.transform = `translate(${c.a.x - 80}px, ${c.a.y - 60}px)`
+    }
+    if (orbBRef.current) {
+      orbBRef.current.style.transform = `translate(${c.b.x + 100}px, ${c.b.y + 70}px)`
+    }
+
+    rafRef.current = requestAnimationFrame(animate)
+  }, [])
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    if (prefersReduced) return
+
+    const onMove = (e: MouseEvent) => {
+      mouseRef.current = { x: e.clientX, y: e.clientY }
+    }
+
+    window.addEventListener("mousemove", onMove, { passive: true })
+    rafRef.current = requestAnimationFrame(animate)
+
+    return () => {
+      window.removeEventListener("mousemove", onMove)
+      cancelAnimationFrame(rafRef.current)
+    }
+  }, [animate])
+
+  const isReduced = variant === "reduced"
+
+  return (
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+      {/* Orb A — follows mouse, larger */}
+      <div
+        ref={orbARef}
+        className="absolute -translate-x-1/2 -translate-y-1/2 will-change-transform"
+        style={{
+          width: isReduced ? "250px" : "400px",
+          height: isReduced ? "250px" : "400px",
+          background: "radial-gradient(circle, hsl(var(--accent) / 0.10) 0%, transparent 70%)",
+          filter: "blur(100px)",
+          opacity: isReduced ? 0.5 : 1,
+        }}
+      />
+
+      {/* Orb B — follows mouse, smaller, different offset */}
+      <div
+        ref={orbBRef}
+        className="absolute -translate-x-1/2 -translate-y-1/2 will-change-transform"
+        style={{
+          width: isReduced ? "200px" : "350px",
+          height: isReduced ? "200px" : "350px",
+          background: "radial-gradient(circle, hsl(var(--accent) / 0.07) 0%, transparent 65%)",
+          filter: "blur(80px)",
+          opacity: isReduced ? 0.5 : 1,
+        }}
+      />
+
+      {/* Orb C — autonomous float */}
+      <div
+        className="absolute animate-float-slow"
+        style={{
+          width: "300px",
+          height: "300px",
+          background: "radial-gradient(circle, hsl(var(--accent) / 0.06) 0%, transparent 70%)",
+          filter: "blur(100px)",
+          left: "20%",
+          top: "40%",
+          animationDuration: "20s",
+          animationDelay: "0s",
+        }}
+      />
+
+      {/* Orb D — autonomous float, different position/timing */}
+      <div
+        className="absolute animate-float-slow"
+        style={{
+          width: "250px",
+          height: "250px",
+          background: "radial-gradient(circle, hsl(var(--accent) / 0.05) 0%, transparent 70%)",
+          filter: "blur(90px)",
+          right: "15%",
+          top: "65%",
+          animationDuration: "25s",
+          animationDelay: "-8s",
+        }}
+      />
+
+      {!isReduced && (
+        <>
+          {/* Orb E — autonomous, top-center */}
+          <div
+            className="absolute animate-float-slow"
+            style={{
+              width: "200px",
+              height: "200px",
+              background: "radial-gradient(circle, hsl(var(--accent) / 0.04) 0%, transparent 70%)",
+              filter: "blur(80px)",
+              left: "55%",
+              top: "15%",
+              animationDuration: "22s",
+              animationDelay: "-5s",
+            }}
+          />
+        </>
+      )}
+    </div>
+  )
+}

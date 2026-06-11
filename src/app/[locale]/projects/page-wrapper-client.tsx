@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import Tag from "@/components/tag"
 import Button from "@/components/button"
+import BackgroundGlow from "@/components/background-glow"
 import allProjects from "@/data/projects"
 import { useTranslations } from "next-intl"
 
@@ -13,10 +14,11 @@ export default function ProjectsPageWrapper() {
   const l = useTranslations("projectLabels")
 
   return (
-    <div className="min-h-screen bg-bg text-fg">
+    <div className="min-h-screen bg-bg text-fg relative">
+      <BackgroundGlow variant="reduced" />
       <Navbar />
 
-      <main className="pt-24 pb-16">
+      <main className="pt-24 pb-16 relative z-10">
         <div className="max-w-wide mx-auto px-6">
           <p className="eyebrow mb-3">{t("title")}</p>
           <p className="text-fg-muted text-base max-w-lg mb-14">{t("description")}</p>

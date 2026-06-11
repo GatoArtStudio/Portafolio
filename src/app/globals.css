@@ -110,20 +110,25 @@
     }
   }
 
-  /* Card surface */
   .card {
     border-radius: var(--radius-md);
     border: 1px solid hsl(var(--border));
-    background-color: hsl(var(--surface));
+    background-color: hsl(var(--surface) / 0.85);
+    backdrop-filter: blur(8px);
     box-shadow: var(--shadow-card);
   }
 
-  /* Elevated surface */
   .card-elevated {
     border-radius: var(--radius-md);
     border: 1px solid hsl(var(--border));
     background-color: hsl(var(--surface-elevated));
     box-shadow: var(--shadow-elevated);
+  }
+
+  .glass {
+    background-color: hsl(var(--surface) / 0.65);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.8);
   }
 }
 
@@ -166,5 +171,24 @@
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @keyframes float-slow {
+    0%, 100% {
+      translate: 0 0;
+    }
+    25% {
+      translate: 30px -20px;
+    }
+    50% {
+      translate: -20px 35px;
+    }
+    75% {
+      translate: -35px -10px;
+    }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 20s ease-in-out infinite;
   }
 }
