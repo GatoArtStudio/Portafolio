@@ -21,8 +21,11 @@ export default function HowIWork() {
 
         <div className="space-y-0">
           {steps.map((step) => (
-            <div key={step.num} className="flex gap-6 py-6 border-t border-border first:border-t-0">
-              <span className="font-mono text-sm text-accent mt-1 shrink-0 tabular-nums">
+            <div
+              key={step.num}
+              className="group flex gap-6 py-6 border-t border-border first:border-t-0 transition-colors duration-300 hover:border-accent/20"
+            >
+              <span className="font-display text-sm font-semibold text-fg-muted mt-1 shrink-0 transition-colors duration-300 group-hover:text-accent">
                 {String(step.num).padStart(2, "0")}
               </span>
               <div>

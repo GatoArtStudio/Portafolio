@@ -29,21 +29,15 @@ export default function Projects() {
 
               <div className="space-y-5 text-fg-muted text-base leading-relaxed max-w-2xl">
                 <div>
-                  <span className="font-mono text-xs text-accent uppercase tracking-wide">
-                    {l("problem")}
-                  </span>
+                  <span className="label-accent">{l("problem")}</span>
                   <p className="mt-1">{pt(`${project.id}.problem`)}</p>
                 </div>
                 <div>
-                  <span className="font-mono text-xs text-accent uppercase tracking-wide">
-                    {l("solution")}
-                  </span>
+                  <span className="label-accent">{l("solution")}</span>
                   <p className="mt-1">{pt(`${project.id}.solution`)}</p>
                 </div>
                 <div>
-                  <span className="font-mono text-xs text-accent uppercase tracking-wide">
-                    {l("result")}
-                  </span>
+                  <span className="label-accent">{l("result")}</span>
                   <p className="mt-1">{pt(`${project.id}.result`)}</p>
                 </div>
               </div>

@@ -2,7 +2,6 @@
 
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import { ROUTES } from "@/lib/routes"
 import { useTranslations } from "next-intl"
 import { socialLinks } from "@/data/social/social"
 
@@ -27,12 +26,14 @@ export default function SocialMedia() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block p-5 border border-border hover:border-accent/40 transition-colors group"
+                className="block p-5 border border-border hover-glow group"
               >
-                <p className="font-display text-lg font-semibold text-fg mb-1 group-hover:text-accent transition-colors">
+                <p className="font-display text-lg font-semibold text-fg mb-1 group-hover:text-accent transition-colors duration-200">
                   {social.name}
                 </p>
-                <p className="font-mono text-xs text-fg-muted mb-3">{social.username}</p>
+                <p className="font-body text-xs font-medium text-fg-muted mb-3">
+                  {social.username}
+                </p>
                 <p className="text-sm text-fg-muted leading-relaxed">
                   {t(`links.${social.id}.description`)}
                 </p>

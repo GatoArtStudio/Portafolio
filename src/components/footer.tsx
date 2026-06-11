@@ -20,9 +20,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-xs text-accent uppercase tracking-wide mb-3">
-              {t("sectionLinks")}
-            </p>
+            <p className="label-accent mb-3">{t("sectionLinks")}</p>
             <div className="space-y-2">
               <Link
                 href={`/${locale}`}
@@ -46,9 +44,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-xs text-accent uppercase tracking-wide mb-3">
-              {t("sectionConnect")}
-            </p>
+            <p className="label-accent mb-3">{t("sectionConnect")}</p>
             <div className="space-y-2">
               <a
                 href="https://github.com/GatoArtStudio"
@@ -78,7 +74,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mt-12 pt-6 border-t border-border font-mono text-xs text-fg-muted">
+        <p className="mt-12 pt-6 border-t border-border font-body text-xs font-medium text-fg-muted">
           {t("copyright", { year })}
         </p>
       </div>

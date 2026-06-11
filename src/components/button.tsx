@@ -10,7 +10,7 @@ type ButtonProps = {
 }
 
 const base =
-  "font-mono text-sm font-medium inline-flex items-center gap-2 px-6 py-3 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 underline-draw"
+  "font-body text-sm font-medium inline-flex items-center gap-2 px-6 py-3 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 underline-draw active:scale-[0.98]"
 
 const variants = {
   primary: "bg-accent text-bg hover:opacity-90",

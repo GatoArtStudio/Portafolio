@@ -1,5 +1,5 @@
 import type React from "react"
-import { Fraunces, DM_Sans, JetBrains_Mono } from "next/font/google"
+import { Outfit, DM_Sans } from "next/font/google"
 import { routing } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import { hasLocale, NextIntlClientProvider } from 'next-intl'
@@ -12,9 +12,9 @@ type Props = PageProps & {
   children: React.ReactNode
 }
 
-const fraunces = Fraunces({
+const outfit = Outfit({
   subsets: ["latin"],
-  axes: ["SOFT", "WONK"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-display",
 })
 
@@ -22,12 +22,6 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-body",
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
 })
 
 export async function generateMetadata({ params }: PageProps) {
@@ -65,7 +59,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html
       lang={locale}
-      className={`${fraunces.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+      className={`${outfit.variable} ${dmSans.variable}`}
     >
       <body className="font-body bg-bg text-fg antialiased">
         <NextIntlClientProvider>

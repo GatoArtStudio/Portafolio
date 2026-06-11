@@ -19,9 +19,7 @@ export default function Technologies() {
         <div className="space-y-8 max-w-2xl">
           {technologiesData.map((group) => (
             <div key={group.category}>
-              <h3 className="font-mono text-xs text-accent uppercase tracking-wide mb-3">
-                {tt(group.category)}
-              </h3>
+              <h3 className="label-accent mb-3">{tt(group.category)}</h3>
               <div className="flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <Tag key={item}>{item}</Tag>

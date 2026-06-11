@@ -60,7 +60,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden font-mono text-xs text-fg-muted border border-border px-3 py-1.5"
+          className="md:hidden font-body text-xs font-medium text-fg-muted border border-border hover:border-accent/40 px-3 py-1.5 transition-all duration-200"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >

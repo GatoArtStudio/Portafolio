@@ -18,17 +18,22 @@ export default function Experience() {
 
         <div className="space-y-14">
           {experienceData.map((entry, i) => (
-            <div key={i} className="border-l-2 border-accent/20 pl-6">
+            <div
+              key={i}
+              className="group border-l-2 border-border pl-6 transition-all duration-300 hover:border-accent/50"
+            >
               <h3 className="font-display text-xl md:text-2xl font-semibold text-fg mb-1">
                 {et(entry.role)}
                 <span className="text-fg-muted font-normal"> — {entry.company}</span>
               </h3>
-              <p className="font-mono text-xs text-fg-muted mb-4">{et(entry.period)}</p>
-              <p className="text-fg-muted text-base leading-relaxed mb-5">{et(entry.description)}</p>
-
-              <p className="font-mono text-xs text-accent uppercase tracking-wide mb-2">
-                {t("resultsLabel")}
+              <p className="font-body text-xs font-medium text-fg-muted mb-4">
+                {et(entry.period)}
               </p>
+              <p className="text-fg-muted text-base leading-relaxed mb-5">
+                {et(entry.description)}
+              </p>
+
+              <p className="label-accent mb-2">{t("resultsLabel")}</p>
               <ul className="space-y-2 mb-5">
                 {entry.results.map((result, j) => (
                   <li

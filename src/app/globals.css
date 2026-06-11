@@ -10,7 +10,9 @@
     --surface: 217 32% 17%;
     --accent: 184 100% 50%;
     --accent-soft: 184 100% 50% / 0.10;
+    --accent-glow: 184 100% 50% / 0.15;
     --border: 217 32% 17%;
+    --border-soft: 217 32% 17% / 0.6;
   }
 
   * {
@@ -53,22 +55,28 @@
 @layer components {
   .font-display {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
   }
   .font-body {
     font-family: var(--font-body);
-  }
-  .font-mono {
-    font-family: var(--font-mono);
   }
 
   .eyebrow {
     font-family: var(--font-body);
     font-size: 0.8125rem;
     font-weight: 500;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: hsl(var(--fg-muted));
+  }
+
+  .label-accent {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: hsl(var(--accent));
   }
 
   .blueprint-line {
@@ -98,6 +106,7 @@
     text-wrap: balance;
   }
 
+  /* Underline draw on hover */
   .underline-draw {
     position: relative;
   }
@@ -113,5 +122,25 @@
   }
   .underline-draw:hover::after {
     width: 100%;
+  }
+
+  /* Hover glow for bordered elements */
+  .hover-glow {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .hover-glow:hover {
+    border-color: hsl(var(--accent) / 0.4);
+    box-shadow: 0 0 20px -8px hsl(var(--accent) / 0.15);
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

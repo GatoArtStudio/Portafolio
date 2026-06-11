@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import Hero from "@/components/sections/hero"
@@ -13,25 +14,43 @@ import CTA from "@/components/sections/cta"
 import BlueprintDivider from "@/components/blueprint-divider"
 
 export default function PageWrapper() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible")
+          }
+        })
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    )
+
+    const elements = document.querySelectorAll(".reveal")
+    elements.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className="min-h-screen bg-bg text-fg">
       <Navbar />
       <main className="pt-14">
         <Hero />
         <BlueprintDivider />
-        <About />
+        <div className="reveal"><About /></div>
         <BlueprintDivider />
-        <Experience />
+        <div className="reveal"><Experience /></div>
         <BlueprintDivider />
-        <Projects />
+        <div className="reveal"><Projects /></div>
         <BlueprintDivider />
-        <HowIWork />
+        <div className="reveal"><HowIWork /></div>
         <BlueprintDivider />
-        <Principles />
+        <div className="reveal"><Principles /></div>
         <BlueprintDivider />
-        <Technologies />
+        <div className="reveal"><Technologies /></div>
         <BlueprintDivider />
-        <CTA />
+        <div className="reveal"><CTA /></div>
       </main>
       <Footer />
     </div>
