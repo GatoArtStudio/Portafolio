@@ -13,6 +13,7 @@ import Technologies from "@/components/sections/technologies"
 import CTA from "@/components/sections/cta"
 import BlueprintDivider from "@/components/blueprint-divider"
 import BackgroundGlow from "@/components/background-glow"
+import BackToTop from "@/components/back-to-top"
 
 export default function PageWrapper() {
   useEffect(() => {
@@ -55,6 +56,7 @@ export default function PageWrapper() {
         <div className="reveal"><CTA /></div>
       </main>
       <Footer />
+      <BackToTop />
     </div>
   )
 }

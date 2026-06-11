@@ -3,6 +3,7 @@
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import BackgroundGlow from "@/components/background-glow"
+import BackToTop from "@/components/back-to-top"
 import { useTranslations } from "next-intl"
 import { socialLinks } from "@/data/social/social"
 
@@ -46,6 +47,7 @@ export default function SocialMedia() {
       </main>
 
       <Footer />
+      <BackToTop />
     </div>
   )
 }

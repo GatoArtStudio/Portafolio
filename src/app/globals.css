@@ -6,7 +6,7 @@
   :root {
     --bg: 222 47% 11%;
     --fg: 210 40% 98%;
-    --fg-muted: 215 20% 65%;
+    --fg-muted: 215 18% 70%;
     --surface: 217 32% 17%;
     --surface-elevated: 217 28% 20%;
     --accent: 184 100% 50%;
@@ -112,17 +112,25 @@
 
   .card {
     border-radius: var(--radius-md);
-    border: 1px solid hsl(var(--border));
-    background-color: hsl(var(--surface) / 0.85);
-    backdrop-filter: blur(8px);
-    box-shadow: var(--shadow-card);
+    border: 1px solid hsl(var(--border) / 0.5);
+    background-color: hsl(var(--surface) / 0.5);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow:
+      0 0 0 1px hsl(var(--accent) / 0.04),
+      0 4px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
   }
 
   .card-elevated {
     border-radius: var(--radius-md);
-    border: 1px solid hsl(var(--border));
-    background-color: hsl(var(--surface-elevated));
-    box-shadow: var(--shadow-elevated);
+    border: 1px solid hsl(var(--border) / 0.5);
+    background-color: hsl(var(--surface-elevated) / 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow:
+      0 0 0 1px hsl(var(--accent) / 0.06),
+      0 8px 28px rgba(0, 0, 0, 0.3);
   }
 
   .glass {
@@ -156,11 +164,16 @@
   }
 
   .hover-glow {
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
   }
   .hover-glow:hover {
-    border-color: hsl(var(--accent) / 0.4);
-    box-shadow: 0 0 20px -6px hsl(var(--accent) / 0.2), var(--shadow-card);
+    border-color: hsl(var(--accent) / 0.35);
+    background-color: hsl(var(--surface) / 0.65);
+    box-shadow:
+      0 0 0 1px hsl(var(--accent) / 0.1),
+      0 8px 28px rgba(0, 0, 0, 0.25),
+      0 0 32px -8px hsl(var(--accent) / 0.15);
+    transform: translateY(-2px);
   }
 
   .reveal {

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useCallback } from "react"
+import { useEffect, useRef, useState, useCallback } from "react"
 
 type Props = {
   variant?: "full" | "reduced"
@@ -11,27 +11,39 @@ export default function BackgroundGlow({ variant = "full" }: Props) {
   const orbBRef = useRef<HTMLDivElement>(null)
   const rafRef = useRef<number>(0)
   const mouseRef = useRef({ x: -500, y: -500 })
+  const lastMoveRef = useRef<number>(0)
   const currentRef = useRef({ a: { x: -500, y: -500 }, b: { x: -500, y: -500 } })
+  const [isTouch, setIsTouch] = useState(false)
 
   const lerp = (a: number, b: number, t: number) => a + (b - a) * t
 
   const animate = useCallback(() => {
     const m = mouseRef.current
     const c = currentRef.current
+    const idle = Date.now() - lastMoveRef.current > 2000
 
-    c.a.x = lerp(c.a.x, m.x, 0.04)
-    c.a.y = lerp(c.a.y, m.y, 0.04)
-    c.b.x = lerp(c.b.x, m.x, 0.025)
-    c.b.y = lerp(c.b.y, m.y, 0.025)
+    if (!idle) {
+      c.a.x = lerp(c.a.x, m.x, 0.04)
+      c.a.y = lerp(c.a.y, m.y, 0.04)
+      c.b.x = lerp(c.b.x, m.x, 0.025)
+      c.b.y = lerp(c.b.y, m.y, 0.025)
 
-    if (orbARef.current) {
-      orbARef.current.style.transform = `translate(${c.a.x - 80}px, ${c.a.y - 60}px)`
-    }
-    if (orbBRef.current) {
-      orbBRef.current.style.transform = `translate(${c.b.x + 100}px, ${c.b.y + 70}px)`
+      if (orbARef.current) {
+        orbARef.current.style.transform = `translate(${c.a.x - 80}px, ${c.a.y - 60}px)`
+      }
+      if (orbBRef.current) {
+        orbBRef.current.style.transform = `translate(${c.b.x + 100}px, ${c.b.y + 70}px)`
+      }
     }
 
     rafRef.current = requestAnimationFrame(animate)
+  }, [])
+
+  useEffect(() => {
+    const touch =
+      "ontouchstart" in window ||
+      (navigator.maxTouchPoints !== undefined && navigator.maxTouchPoints > 0)
+    setIsTouch(touch)
   }, [])
 
   useEffect(() => {
@@ -40,18 +52,22 @@ export default function BackgroundGlow({ variant = "full" }: Props) {
 
     const onMove = (e: MouseEvent) => {
       mouseRef.current = { x: e.clientX, y: e.clientY }
+      lastMoveRef.current = Date.now()
     }
 
-    window.addEventListener("mousemove", onMove, { passive: true })
+    if (!isTouch) {
+      window.addEventListener("mousemove", onMove, { passive: true })
+    }
     rafRef.current = requestAnimationFrame(animate)
 
     return () => {
       window.removeEventListener("mousemove", onMove)
       cancelAnimationFrame(rafRef.current)
     }
-  }, [animate])
+  }, [animate, isTouch])
 
   const isReduced = variant === "reduced"
+  const showMouseOrbs = !isTouch
 
   const particles = isReduced
     ? [
@@ -74,30 +90,34 @@ export default function BackgroundGlow({ variant = "full" }: Props) {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
       {/* Orb A — follows mouse, larger */}
-      <div
-        ref={orbARef}
-        className="absolute -translate-x-1/2 -translate-y-1/2 will-change-transform"
-        style={{
-          width: isReduced ? "250px" : "400px",
-          height: isReduced ? "250px" : "400px",
-          background: "radial-gradient(circle, hsl(var(--accent) / 0.10) 0%, transparent 70%)",
-          filter: "blur(100px)",
-          opacity: isReduced ? 0.5 : 1,
-        }}
-      />
+      {showMouseOrbs && (
+        <div
+          ref={orbARef}
+          className="absolute -translate-x-1/2 -translate-y-1/2 will-change-transform"
+          style={{
+            width: isReduced ? "250px" : "400px",
+            height: isReduced ? "250px" : "400px",
+            background: "radial-gradient(circle, hsl(var(--accent) / 0.10) 0%, transparent 70%)",
+            filter: "blur(100px)",
+            opacity: isReduced ? 0.5 : 1,
+          }}
+        />
+      )}
 
       {/* Orb B — follows mouse, smaller, different offset */}
-      <div
-        ref={orbBRef}
-        className="absolute -translate-x-1/2 -translate-y-1/2 will-change-transform"
-        style={{
-          width: isReduced ? "200px" : "350px",
-          height: isReduced ? "200px" : "350px",
-          background: "radial-gradient(circle, hsl(var(--accent) / 0.07) 0%, transparent 65%)",
-          filter: "blur(80px)",
-          opacity: isReduced ? 0.5 : 1,
-        }}
-      />
+      {showMouseOrbs && (
+        <div
+          ref={orbBRef}
+          className="absolute -translate-x-1/2 -translate-y-1/2 will-change-transform"
+          style={{
+            width: isReduced ? "200px" : "350px",
+            height: isReduced ? "200px" : "350px",
+            background: "radial-gradient(circle, hsl(var(--accent) / 0.07) 0%, transparent 65%)",
+            filter: "blur(80px)",
+            opacity: isReduced ? 0.5 : 1,
+          }}
+        />
+      )}
 
       {/* Orb C — autonomous float */}
       <div

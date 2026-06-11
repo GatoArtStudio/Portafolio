@@ -5,6 +5,7 @@ import Footer from "@/components/footer"
 import Tag from "@/components/tag"
 import Button from "@/components/button"
 import BackgroundGlow from "@/components/background-glow"
+import BackToTop from "@/components/back-to-top"
 import allProjects from "@/data/projects"
 import { useTranslations } from "next-intl"
 
@@ -30,11 +31,11 @@ export default function ProjectsPageWrapper() {
                 className="card hover-glow p-6 flex flex-col transition-all duration-300"
               >
                 {project.image && (
-                  <div className="mb-5 overflow-hidden">
+                  <div className="mb-5 -mx-6 -mt-6 rounded-t-md overflow-hidden">
                     <img
                       src={project.image}
                       alt={pt(`${project.id}.title`)}
-                      className="w-full h-48 object-cover rounded-sm transition-transform duration-500 hover:scale-105"
+                      className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
                       loading="lazy"
                     />
                   </div>
@@ -82,6 +83,7 @@ export default function ProjectsPageWrapper() {
       </main>
 
       <Footer />
+      <BackToTop />
     </div>
   )
 }
