@@ -1,0 +1,42 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#0f3a45" />
+      <stop offset="100%" stop-color="#0a1320" />
+    </radialGradient>
+    <radialGradient id="orb1" cx="20%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#00d5e8" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#00d5e8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orb2" cx="80%" cy="60%" r="40%">
+      <stop offset="0%" stop-color="#00d5e8" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#00d5e8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#orb1)" />
+  <rect width="1200" height="630" fill="url(#orb2)" />
+
+  <text x="80" y="120" font-family="system-ui, sans-serif" font-size="18" font-weight="500" fill="#5d8a9b" letter-spacing="2">
+    SOFTWARE ENGINEER
+  </text>
+
+  <text x="80" y="240" font-family="system-ui, sans-serif" font-size="88" font-weight="700" fill="#ebe8e0" letter-spacing="-2">
+    Hervis Cortes
+  </text>
+
+  <text x="80" y="360" font-family="system-ui, sans-serif" font-size="44" font-weight="600" fill="#8b8880">
+    <tspan x="80" dy="0">Builds maintainable,</tspan>
+    <tspan x="80" dy="56">scalable software products.</tspan>
+  </text>
+
+  <text x="80" y="560" font-family="system-ui, sans-serif" font-size="22" font-weight="400" fill="#8b8880">
+    gatoartstudio.art
+  </text>
+
+  <line x1="80" y1="600" x2="200" y2="600" stroke="#00d5e8" stroke-width="2" />
+  <text x="80" y="585" font-family="system-ui, sans-serif" font-size="16" font-weight="500" fill="#00d5e8">
+    AVAILABLE FOR PROJECTS
+  </text>
+</svg>
