@@ -3,44 +3,236 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --background: 222 47% 11%;
-        --foreground: 210 40% 98%;
+  :root {
+    --bg: 222 47% 11%;
+    --fg: 210 40% 98%;
+    --fg-muted: 215 18% 70%;
+    --surface: 217 32% 17%;
+    --surface-elevated: 217 28% 20%;
+    --accent: 184 100% 50%;
+    --accent-soft: 184 100% 50% / 0.10;
+    --accent-glow: 184 100% 50% / 0.15;
+    --border: 217 32% 17%;
+    --border-soft: 217 32% 17% / 0.6;
 
-        --card: 222 47% 11%;
-        --card-foreground: 210 40% 98%;
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
 
-        --popover: 222 47% 11%;
-        --popover-foreground: 210 40% 98%;
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.25);
+    --shadow-elevated: 0 2px 6px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-button: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
 
-        --primary: 184 100% 50%;
-        --primary-foreground: 222 47% 11%;
+  * {
+    box-sizing: border-box;
+  }
 
-        --secondary: 217 32% 17%;
-        --secondary-foreground: 210 40% 98%;
+  html {
+    scroll-behavior: smooth;
+    background-color: hsl(var(--bg));
+    color: hsl(var(--fg));
+  }
 
-        --muted: 217 32% 17%;
-        --muted-foreground: 215 20% 65%;
+  body {
+    background-color: hsl(var(--bg));
+    color: hsl(var(--fg));
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-        --accent: 217 32% 17%;
-        --accent-foreground: 210 40% 98%;
+  ::selection {
+    background: hsl(var(--accent));
+    color: hsl(var(--bg));
+  }
 
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 210 40% 98%;
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
 
-        --border: 217 32% 17%;
-        --input: 217 32% 17%;
-        --ring: 184 100% 50%;
-
-        --radius: 0.5rem;
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
     }
+  }
 }
 
-@layer base {
-    * {
-        @apply border-border;
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: hsl(var(--fg-muted));
+  }
+
+  .label-accent {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: hsl(var(--accent));
+  }
+
+  .blueprint-line {
+    stroke: hsl(var(--accent));
+    opacity: 0.25;
+    fill: none;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
     }
-    body {
-        @apply bg-background text-foreground;
-    }
+  }
+
+  .card {
+    border-radius: var(--radius-md);
+    border: 1px solid hsl(var(--border) / 0.5);
+    background-color: hsl(var(--surface) / 0.5);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow:
+      0 0 0 1px hsl(var(--accent) / 0.04),
+      0 4px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+
+  .card-elevated {
+    border-radius: var(--radius-md);
+    border: 1px solid hsl(var(--border) / 0.5);
+    background-color: hsl(var(--surface-elevated) / 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow:
+      0 0 0 1px hsl(var(--accent) / 0.06),
+      0 8px 28px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass {
+    background-color: hsl(var(--surface) / 0.65);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.8);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .underline-draw {
+    position: relative;
+  }
+  .underline-draw::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: hsl(var(--accent));
+    border-radius: 1px;
+    transition: width 0.3s ease;
+  }
+  .underline-draw:hover::after {
+    width: 100%;
+  }
+
+  .hover-glow {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  }
+  .hover-glow:hover {
+    border-color: hsl(var(--accent) / 0.35);
+    background-color: hsl(var(--surface) / 0.65);
+    box-shadow:
+      0 0 0 1px hsl(var(--accent) / 0.1),
+      0 8px 28px rgba(0, 0, 0, 0.25),
+      0 0 32px -8px hsl(var(--accent) / 0.15);
+    transform: translateY(-2px);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes float-slow {
+    0%, 100% { translate: 0 0; }
+    25% { translate: 30px -20px; }
+    50% { translate: -20px 35px; }
+    75% { translate: -35px -10px; }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 20s ease-in-out infinite;
+  }
+
+  @keyframes particle-drift-1 {
+    0%   { transform: translate(-5vw, -5vh); opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { transform: translate(105vw, 105vh); opacity: 0; }
+  }
+  @keyframes particle-drift-2 {
+    0%   { transform: translate(105vw, 105vh); opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { transform: translate(-5vw, -5vh); opacity: 0; }
+  }
+  @keyframes particle-drift-3 {
+    0%   { transform: translate(-5vw, 50vh); opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { transform: translate(105vw, 50vh); opacity: 0; }
+  }
+  @keyframes particle-drift-4 {
+    0%   { transform: translate(50vw, -5vh); opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { transform: translate(50vw, 105vh); opacity: 0; }
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+  .particle-dot {
+    background: hsl(var(--accent));
+  }
+  .particle-ring {
+    background: transparent;
+    border: 1px solid hsl(var(--accent));
+  }
 }

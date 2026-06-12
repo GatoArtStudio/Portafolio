@@ -1,125 +1,49 @@
 "use client"
 
-import {useEffect, useRef} from "react"
-import {gsap} from "gsap"
-import {Button} from "@/components/ui/button"
-import {ChevronDown} from "lucide-react"
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl"
+import Button from "@/components/button"
+import BlueprintSketch from "@/components/blueprint-sketch"
 
 export default function Hero() {
-    const t = useTranslations('MainHero');
-    const heroRef = useRef<HTMLElement>(null)
+  const t = useTranslations("MainHero")
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            // Animate hero elements
-            const tl = gsap.timeline()
+  return (
+    <section id="hero" className="relative min-h-[95vh] flex items-center overflow-hidden">
+      <div className="absolute inset-0 opacity-30">
+        <BlueprintSketch />
+      </div>
 
-            tl.from(".hero-title", {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                ease: "power3.out",
-            })
-                .from(
-                    ".hero-subtitle",
-                    {
-                        opacity: 0,
-                        y: 30,
-                        duration: 1,
-                        ease: "power3.out",
-                    },
-                    "-=0.6",
-                )
-                .from(
-                    ".hero-description",
-                    {
-                        opacity: 0,
-                        y: 30,
-                        duration: 1,
-                        ease: "power3.out",
-                    },
-                    "-=0.8",
-                )
-                .from(
-                    ".hero-button",
-                    {
-                        opacity: 0,
-                        y: 30,
-                        stagger: 0.2,
-                        duration: 0.8,
-                        ease: "back.out(1.7)",
-                    },
-                    "-=0.6",
-                )
-                .from(
-                    ".scroll-indicator",
-                    {
-                        opacity: 0,
-                        y: -20,
-                        duration: 0.8,
-                        ease: "power2.out",
-                        repeat: -1,
-                        yoyo: true,
-                    },
-                    "-=0.4",
-                )
+      <div className="relative z-10 max-w-content mx-auto px-6 w-full py-20">
+        <p className="eyebrow mb-6 animate-fade-in">{t("eyebrow")}</p>
 
-            // Animate the gradient background
-            gsap.to(".hero-gradient", {
-                backgroundPosition: "200% 200%",
-                duration: 15,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut",
-            })
-        }, heroRef)
+        <h1
+          className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-fg mb-6 text-balance animate-fade-in"
+          style={{ animationDelay: "0.15s" }}
+        >
+          {t("name")}
+        </h1>
 
-        return () => ctx.revert()
-    }, [])
+        <p
+          className="font-display text-xl sm:text-2xl md:text-3xl font-semibold leading-snug text-fg-muted max-w-2xl mb-6 text-balance animate-fade-in"
+          style={{ animationDelay: "0.3s" }}
+        >
+          {t("headline")}
+        </p>
 
-    const scrollToAbout = () => {
-        const aboutSection = document.getElementById("about")
-        if (aboutSection) {
-            aboutSection.scrollIntoView({behavior: "smooth"})
-        }
-    }
+        <p
+          className="font-body text-base md:text-lg text-fg-muted max-w-xl mb-10 animate-fade-in"
+          style={{ animationDelay: "0.45s" }}
+        >
+          {t("description")}
+        </p>
 
-    return (
-        <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-            <div
-                className="hero-gradient absolute inset-0 bg-gradient-to-br from-background via-cyan-950/20 to-background bg-[length:200%_200%] z-0"></div>
-            <div className="container mx-auto px-4 py-24 z-10">
-                <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="hero-title text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                        <span
-                            className="block bg-gradient-to-r from-primary to-cyan-300 text-transparent bg-clip-text mt-2">
-              Hervis Cortes
-            </span>
-                    </h1>
-                    <h2 className="hero-subtitle text-3xl md:text-4xl font-medium text-muted-foreground mb-6">
-                        {t('subtitle')}
-                    </h2>
-                    <p className="hero-description text-lg md:text-xl text-muted-foreground mb-8">
-                        {t('description')}
-                    </p>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-                        <Button className="hero-button" size="lg" asChild>
-                            <a href="#projects">{t('buttonProjects')}</a>
-                        </Button>
-                        <Button className="hero-button" variant="outline" size="lg" asChild>
-                            <a href="mailto:contact@gatoartstudio.art">{t('buttonContact')}</a>
-                        </Button>
-                    </div>
-
-                    <div
-                        className="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
-                        onClick={scrollToAbout}
-                    >
-                        <ChevronDown className="h-8 w-8 text-primary animate-bounce"/>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
+        <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+          <Button href="#projects">{t("buttonProjects")}</Button>
+          <Button href="mailto:gatoartstudio@gmail.com" variant="outline">
+            {t("buttonContact")}
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
 }
