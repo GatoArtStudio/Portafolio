@@ -39,7 +39,7 @@ export default function Hero() {
 
         <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.6s" }}>
           <Button href="#projects">{t("buttonProjects")}</Button>
-          <Button href="mailto:contact@gatoartstudio.art" variant="outline">
+          <Button href="mailto:gatoartstudio@gmail.com" variant="outline">
             {t("buttonContact")}
           </Button>
         </div>

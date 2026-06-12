@@ -48,7 +48,7 @@ export default function CTA() {
               {t("description")}
             </p>
 
-            <Button href="mailto:contact@gatoartstudio.art" className="text-base px-8 py-4">
+            <Button href="mailto:gatoartstudio@gmail.com" className="text-base px-8 py-4">
               {t("button")}
             </Button>
           </div>

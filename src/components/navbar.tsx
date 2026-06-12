@@ -75,7 +75,7 @@ export default function Navbar() {
             })}
 
             <a
-              href="mailto:contact@gatoartstudio.art"
+              href="mailto:gatoartstudio@gmail.com"
               className="font-body text-sm text-fg-muted hover:text-fg underline-draw transition-colors"
             >
               {t("buttonContact")}
@@ -108,7 +108,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="mailto:contact@gatoartstudio.art"
+            href="mailto:gatoartstudio@gmail.com"
             onClick={() => setMenuOpen(false)}
             className="block font-body text-base text-fg-muted hover:text-fg transition-colors"
           >
