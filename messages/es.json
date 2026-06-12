@@ -153,10 +153,9 @@
   },
   "technologies": {
     "languages": "Lenguajes",
-    "scripting": "Scripting",
     "frameworks": "Frameworks y Librerías",
     "tools": "Herramientas y Tecnologías",
-    "totalLabel": "tecnologías en 4 categorías"
+    "totalLabel": "tecnologías en 3 categorías"
   },
   "MainCTA": {
     "status": "Disponible para proyectos",
