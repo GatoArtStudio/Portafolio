@@ -159,9 +159,36 @@
   },
   "MainCTA": {
     "status": "Disponible para proyectos",
-    "title": "¿Necesitas construir o mejorar un producto de software?",
-    "description": "Trabajo con clientes y empresas desarrollando productos mantenibles, escalables y preparados para evolucionar.",
+    "eyebrow": "Contacto",
+    "title": "Construyamos algo",
+    "description": "Trabajo con clientes y empresas desarrollando productos mantenibles, escalables y preparados para evolucionar. Si tienes un proyecto en mente o quieres explorar una idea, envíame un mensaje.",
     "button": "Hablemos sobre tu proyecto"
+  },
+  "MainContactForm": {
+    "title": "Envíame un mensaje",
+    "description": "Completa el formulario a continuación y te responderé lo antes posible.",
+    "formHeading": "Escribir mensaje",
+    "form": {
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "nameError": "Por favor introduce tu nombre (al menos 2 caracteres).",
+      "emailLabel": "Email",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "emailError": "Por favor introduce un email válido.",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto o idea...",
+      "messageError": "Por favor introduce un mensaje (al menos 10 caracteres).",
+      "messageCount": "{count} / 500",
+      "buttonSubmit": "Enviar mensaje",
+      "buttonSubmitting": "Enviando...",
+      "buttonSuccess": "Mensaje enviado",
+      "successTitle": "Mensaje enviado correctamente",
+      "successDescription": "Gracias por contactarme. Te responderé pronto.",
+      "errorTitle": "Algo salió mal",
+      "errorDescription": "Tu mensaje no pudo enviarse. Por favor inténtalo de nuevo o escríbeme directamente.",
+      "toastSuccess": "Mensaje enviado correctamente",
+      "toastError": "Error al enviar el mensaje"
+    }
   },
   "MainFooter": {
     "description": "Software Engineer detrás de GatoArtStudio. Construyendo productos de software mantenibles y escalables.",

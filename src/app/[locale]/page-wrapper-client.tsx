@@ -15,6 +15,8 @@ import BlueprintDivider from "@/components/blueprint-divider"
 import BackgroundGlow from "@/components/background-glow"
 import BackToTop from "@/components/back-to-top"
 import SectionNav from "@/components/section-nav"
+import { ToastProvider } from "@/components/toast-provider"
+import Toast from "@/components/toast"
 
 export default function PageWrapper() {
   useEffect(() => {
@@ -36,25 +38,28 @@ export default function PageWrapper() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-bg text-fg relative">
-      <BackgroundGlow />
-      <Navbar />
-      <main className="pt-14 relative z-10">
-        <Hero />
-        <BlueprintDivider />
-        <div className="reveal"><About /></div>
-        <BlueprintDivider />
-        <div className="reveal"><Experience /></div>
-        <div className="reveal"><Projects /></div>
-        <div className="reveal"><HowIWork /></div>
-        <div className="reveal"><Principles /></div>
-        <div className="reveal"><Technologies /></div>
-        <BlueprintDivider />
-        <div className="reveal"><CTA /></div>
-      </main>
-      <Footer />
-      <BackToTop />
-      <SectionNav />
-    </div>
+    <ToastProvider>
+      <div className="min-h-screen bg-bg text-fg relative">
+        <BackgroundGlow />
+        <Navbar />
+        <main className="pt-14 relative z-10">
+          <Hero />
+          <BlueprintDivider />
+          <div className="reveal"><About /></div>
+          <BlueprintDivider />
+          <div className="reveal"><Experience /></div>
+          <div className="reveal"><Projects /></div>
+          <div className="reveal"><HowIWork /></div>
+          <div className="reveal"><Principles /></div>
+          <div className="reveal"><Technologies /></div>
+          <BlueprintDivider />
+          <div className="reveal"><CTA /></div>
+        </main>
+        <Footer />
+        <BackToTop />
+        <SectionNav />
+        <Toast />
+      </div>
+    </ToastProvider>
   )
 }
