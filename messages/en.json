@@ -159,9 +159,36 @@
   },
   "MainCTA": {
     "status": "Available for projects",
-    "title": "Need to build or improve a software product?",
-    "description": "I work with clients and companies developing maintainable, scalable products ready to evolve.",
+    "eyebrow": "Contact",
+    "title": "Let's build something",
+    "description": "I work with clients and companies developing maintainable, scalable products ready to evolve. If you have a project in mind or want to explore an idea, send me a message.",
     "button": "Let's talk about your project"
+  },
+  "MainContactForm": {
+    "title": "Send me a message",
+    "description": "Fill out the form below and I'll get back to you as soon as possible.",
+    "formHeading": "Compose message",
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "nameError": "Please enter your name (at least 2 characters).",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@example.com",
+      "emailError": "Please enter a valid email address.",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell me about your project or idea...",
+      "messageError": "Please enter a message (at least 10 characters).",
+      "messageCount": "{count} / 500",
+      "buttonSubmit": "Send message",
+      "buttonSubmitting": "Sending...",
+      "buttonSuccess": "Message sent",
+      "successTitle": "Message sent successfully",
+      "successDescription": "Thanks for reaching out. I'll reply to you soon.",
+      "errorTitle": "Something went wrong",
+      "errorDescription": "Your message couldn't be sent. Please try again or email me directly.",
+      "toastSuccess": "Message sent successfully",
+      "toastError": "Error sending the message"
+    }
   },
   "MainFooter": {
     "description": "Software Engineer behind GatoArtStudio. Building maintainable and scalable software products.",

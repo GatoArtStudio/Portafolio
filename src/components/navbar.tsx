@@ -74,12 +74,12 @@ export default function Navbar() {
               )
             })}
 
-            <a
-              href="mailto:gatoartstudio@gmail.com"
+            <Link
+              href={`/${locale}#contact`}
               className="font-body text-sm text-fg-muted hover:text-fg underline-draw transition-colors"
             >
               {t("buttonContact")}
-            </a>
+            </Link>
 
             <LanguageSwitcher />
           </div>
@@ -107,13 +107,13 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          <a
-            href="mailto:gatoartstudio@gmail.com"
+          <Link
+            href={`/${locale}#contact`}
             onClick={() => setMenuOpen(false)}
             className="block font-body text-base text-fg-muted hover:text-fg transition-colors"
           >
             {t("buttonContact")}
-          </a>
+          </Link>
           <div className="pt-2">
             <LanguageSwitcher />
           </div>
