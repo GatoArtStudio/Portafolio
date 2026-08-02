@@ -1,4 +1,6 @@
-const technologies = [
+import type { TechnologyGroup } from "@/types/technology/technology"
+
+const technologies: TechnologyGroup[] = [
   {
     category: "languages",
     items: ["Java", "C#", "JavaScript", "TypeScript", "HTML5", "CSS3"],
