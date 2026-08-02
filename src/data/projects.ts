@@ -1,11 +1,4 @@
-export type Project = {
-  id: string
-  category: string
-  image?: string
-  tags: string[]
-  repoUrl?: string
-  productionUrl?: string
-}
+import type { Project } from "@/types/project/project"
 
 const projects: Project[] = [
   {
@@ -21,14 +14,13 @@ const projects: Project[] = [
     image: "/kailand-portada.png",
     tags: ["React", "Astro", "TailwindCSS"],
     productionUrl: "https://kailand.es/",
-    repoUrl: "https://github.com/GatoArtStudio/kailand/tree/web",
+    repoUrl: "https://github.com/GatoArtStudio/kailand-web",
   },
   {
     id: "appGatoBot",
     category: "backend",
     image: "/gatobot-portada.png",
     tags: ["Python", "FastAPI", "MySQL", "Astro", "React", "TailwindCSS", "Docker"],
-    productionUrl: "https://gatobot.gatoartstudio.art/",
     repoUrl: "https://github.com/GatoArtStudio/GatoBot",
   },
   {
@@ -42,7 +34,7 @@ const projects: Project[] = [
     category: "desktop",
     image: "https://raw.githubusercontent.com/GatoArtStudios/kailand/main/previews/opcional.png",
     tags: ["Python", "Flet"],
-    repoUrl: "https://github.com/GatoArtStudio/kailand",
+    productionUrl: "https://kailand.es/",
   },
   {
     id: "authGatun",
