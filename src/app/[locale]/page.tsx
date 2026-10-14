@@ -23,7 +23,7 @@ export default async function IndexPage({ params }: PageProps) {
     jobTitle: "Software Engineer",
     description:
       "Software Engineer focused on building maintainable and scalable software products.",
-    url: "https://gatoartstudio.art",
+    url: "https://gatoartstudio.com",
     sameAs: [
       "https://github.com/GatoArtStudio",
       "https://www.linkedin.com/in/hervis-cortes/",
