@@ -7,7 +7,7 @@ export const ROUTES = {
         PRIVACY_POLICY: { URL: "/privacy-policy", ID: "privacy-policy" },
     },
     OTHERS: {
-        DISCORD: { URL: "https://discord.gatoartstudio.art/", ID: "discord" },
+        DISCORD: { URL: "https://discord.gatoartstudio.com/", ID: "discord" },
         LINKEDIN: { URL: "https://www.linkedin.com/in/hervis-cortes/", ID: "linkedin" },
         GITHUB: { URL: "https://github.com/GatoArtStudio", ID: "github" },
         TWITTER: { URL: "https://twitter.com/GatoArtStudio", ID: "twitter" },

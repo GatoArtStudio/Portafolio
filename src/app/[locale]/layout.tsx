@@ -27,7 +27,7 @@ const dmSans = DM_Sans({
 export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'Metadata' })
-  const baseUrl = 'https://gatoartstudio.art'
+  const baseUrl = 'https://gatoartstudio.com'
 
   return {
     title: {
